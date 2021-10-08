@@ -1,0 +1,2297 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbr:    <http://dbpedia.org/resource/> .
+@prefix dbo:    <http://dbpedia.org/ontology/> .
+@prefix foaf:   <http://xmlns.com/foaf/spec/> .
+@prefix uni:    <http://localhost:3030/assignment1/> .
+
+uni:Course a rdfs:Class ;
+  rdfs:label    "Course"@en ;
+  rdfs:comment  "A course at a university." .
+
+uni:subject a rdf:Property ;
+  rdfs:label    "Subject"@en ;
+  rdfs:comment  "The course subject (e.g. COMP for Computer Science)." ;
+  rdfs:domain   uni:Course .
+
+uni:number a rdf:Property ;
+  rdfs:label    "Number"@en ;
+  rdfs:comment  "The course number, usually composed of 3 or 4 digits." ;
+  rdfs:domain   uni:Course .
+
+uni:name a rdf:Property ;
+  rdfs:label    "Name"@en ;
+  rdfs:comment  "The course name (e.g. Intelligent Systems)." ;
+  rdfs:domain   uni:Course .
+
+uni:description a rdf:Property ;
+  rdfs:label    "Description"@en ;
+  rdfs:comment  "The course description" ;
+  rdfs:domain   uni:Course .
+
+uni:taught_at a rdf:Property ;
+  rdfs:label    "Taught at"@en ;
+  rdfs:comment  "The academic institution at which the course is taught." ;
+  rdfs:domain   uni:Course ;
+  rdfs:range    dbo:University .
+
+uni:topic a rdfs:Class ;
+  rdfs:label    "has topic"@en ;
+  rdfs:comment  "Topic " .
+
+uni:hasTopic a rdf:Property ;
+  rdfs:label    "has the topic"@en ;
+  rdfs:comment  "predicate that denotes a course having a topic " .
+
+uni:label a rdf:Property ;
+  rdfs:label    "Topic"@en ;
+  rdfs:comment  "predicate that denotes that a course has a specific topic " .
+
+uni:link a rdf:Property ;
+  rdfs:label    "URI is"@en ;
+  rdfs:comment  "predicate that denotes a link to URI " .
+
+
+uni:Student a rdfs:Class ;
+  rdfs:label    "Student"@en ;
+  rdfs:comment  "Student Class." .
+
+uni:StudentID a rdfs:Class ;
+  rdfs:label    "Student ID"@en ;
+  rdfs:comment  "StudenID Class." .
+
+uni:hasStudentID a rdf:Property ;
+  rdfs:label    "has ID"@en ;
+  rdfs:comment  "Property that denotes ownership of a studnet ID." .
+
+uni:completed a rdf:Property ;
+    rdfs:domain uni:Student ;
+    rdfs:range uni:Course ;
+  rdfs:label    "took in  2016"@en ;
+  rdfs:comment  "Property that denotes taking the course in 2016." .
+
+uni:gotAin a rdf:Property ;
+    rdfs:domain uni:Student ;
+    rdfs:range uni:Course ;
+           rdfs:subPropertyOf uni:completed ;
+  rdfs:label    "got an A in the course"@en ;
+  rdfs:comment  "Property that denotes recieving an A in a course." .
+
+uni:gotBin a rdf:Property ;
+    rdfs:domain uni:Student ;
+    rdfs:range uni:Course ;
+           rdfs:subPropertyOf uni:completed ;
+  rdfs:label    "got a B in the course"@en ;
+  rdfs:comment  "Property that denotes recieving an B in a course." .
+
+uni:gotCin a rdf:Property ;
+    rdfs:domain uni:Student ;
+    rdfs:range uni:Course ;
+           rdfs:subPropertyOf uni:completed ;
+  rdfs:label    "got a C in the course "@en ;
+  rdfs:comment  "Property that denotes recieving an C in a course." .
+
+uni:gotDin a rdf:Property ;
+    rdfs:domain uni:Student ;
+    rdfs:range uni:Course ;
+           rdfs:subPropertyOf uni:completed ;
+  rdfs:label    "got a D in the course"@en ;
+  rdfs:comment  "Property that denotes recieving an D in a course." .
+
+uni:gotFin a rdf:Property ;
+    rdfs:domain uni:Student ;
+    rdfs:range uni:Course ;
+           rdfs:subPropertyOf uni:completed ;
+  rdfs:label    "got an F in the course"@en ;
+  rdfs:comment  "Property that denotes recieving an F in a course." .
+uni:COMP6231 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6231" ;
+  uni:name         "Distributed System Design" ;
+  uni:description  "Principles of distributed computing: scalability, transparency, concurrency, consistency, fault tolerance. Client-server interaction technologies: interprocess communication, sockets, group communication, remote procedure call, remote method invocation, object request broker, CORBA, web services. Distributed server design techniques: process replication, fault tolerance through passive replication, high availability through active replication, coordination and agreement transactions and concurrency control. Designing software fault-tolerant highly available distributed systems using process replication. Laboratory: two hours per week."  ;
+  uni:hasTopic        uni:Distributed_computing  ;
+  uni:hasTopic        uni:Scalability  ;
+  uni:hasTopic        uni:Concurrent_computing  ;
+  uni:hasTopic        uni:Fault_tolerance  ;
+  uni:hasTopic        uni:Client_server_model  ;
+  uni:hasTopic        uni:Inter-process_communication  ;
+  uni:hasTopic        uni:Communication  ;
+  uni:hasTopic        uni:Remote_procedure_call  ;
+  uni:hasTopic        uni:Common_Object_Request_Broker_Architecture  ;
+  uni:hasTopic        uni:Web_server  ;
+  uni:hasTopic        uni:Concurrency_control  ;
+  uni:hasTopic        uni:Fault_tolerance  ;
+  uni:hasTopic        uni:Distributed_computing  .
+
+uni:COMP6281 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6281" ;
+  uni:name         "Parallel Programming (*)" ;
+  uni:description  "Migration from Von Neumann to parallel processing architectures: shared-memory and message-passing paradigms; massively parallel computers; recent trends in commodity parallel processing; clusters, multi-core, CPU-GPU based heterogeneous computing. Issues of memory consistency and load balancing. Parallel algorithms for shared-memory and message passing platforms; efficiency and scalability; issues of performance overhead. Parallel programming environments: parallel programming models; languages; software tools. Laboratory: two hours per week. A project is required."  ;
+  uni:hasTopic        uni:Balthasar_Neumann  ;
+  uni:hasTopic        uni:Parallel_computing  ;
+  uni:hasTopic        uni:Message_passing  ;
+  uni:hasTopic        uni:MIMD  ;
+  uni:hasTopic        uni:Commodity_computing  ;
+  uni:hasTopic        uni:Multi-core_processor  ;
+  uni:hasTopic        uni:Heterogeneous_computing  ;
+  uni:hasTopic        uni:Computer_memory  ;
+  uni:hasTopic        uni:Weight_distribution  ;
+  uni:hasTopic        uni:Message_passing  ;
+  uni:hasTopic        uni:Scalability  ;
+  uni:hasTopic        uni:Parallel_computing  .
+
+uni:COMP6311 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6311" ;
+  uni:name         "Animation for Computer Games (*)" ;
+  uni:description  "Introduction to the algorithms, data structures, and techniques used in modelling and rendering dynamic scenes. Topics include principles of traditional animation, production pipeline, animation hardware and software, orientation representation and interpolation, modelling physical and articulated objects, forward and inverse kinematics, motion control and capture, key-frame, procedural, and behavioural animation, camera animation, scripting system, and free-form deformation. A project is required. Laboratory: two hours per week."  ;
+  uni:hasTopic        uni:Traditional_animation  ;
+  uni:hasTopic        uni:Graphics_pipeline  ;
+  uni:hasTopic        uni:Interpolation  ;
+  uni:hasTopic        uni:Inverse_kinematics  ;
+  uni:hasTopic        uni:Motion_control  ;
+  uni:hasTopic        uni:Free-form_deformation  .
+
+uni:COMP6321 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6321" ;
+  uni:name         "Machine Learning" ;
+  uni:description  "Introduction to the fundamentals of machine learning. Linear models: linear and polynomial regression, overfitting, model selection, logistic regression, naive Bayes. Non-linear models: decision trees, instance-based learning, boosting, neural networks. Support vector machines and kernels. Computational learning theory. Experimental methodology, sources of error. Structured models: graphical models, deep belief networks. Unsupervised learning: k-means, mixture models, density estimation, expectation maximization, principle component analysis, eigenmaps and other dimensionality reduction methods. Learning in dynamical systems: hidden Markov models and other types of temporal/sequence models. Reinforcement learning. Survey of machine learning and its applications. A project is required. Laboratory: two hours per week."  ;
+  uni:hasTopic        uni:Machine_learning  ;
+  uni:hasTopic        uni:Polynomial_regression  ;
+  uni:hasTopic        uni:Overfitting  ;
+  uni:hasTopic        uni:Model_selection  ;
+  uni:hasTopic        uni:Logistic_regression  ;
+  uni:hasTopic        uni:Decision_tree_learning  ;
+  uni:hasTopic        uni:Instance-based_learning  ;
+  uni:hasTopic        uni:Artificial_neural_network  ;
+  uni:hasTopic        uni:Support_vector_machine  ;
+  uni:hasTopic        uni:Computational_learning_theory  ;
+  uni:hasTopic        uni:Deep_belief_network  ;
+  uni:hasTopic        uni:Unsupervised_learning  ;
+  uni:hasTopic        uni:K-means_clustering  ;
+  uni:hasTopic        uni:Expectation_maximization_algorithm  ;
+  uni:hasTopic        uni:Principal_component_analysis  ;
+  uni:hasTopic        uni:Dimensionality_reduction  ;
+  uni:hasTopic        uni:Dynamical_system  ;
+  uni:hasTopic        uni:Hidden_Markov_model  ;
+  uni:hasTopic        uni:Reinforcement_learning  .
+
+uni:COMP6331 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6331" ;
+  uni:name         "Advanced Game Development (*)" ;
+  uni:description  "Introduction to advanced aspects of computer games. Game engine design. Artificial Intelligence (AI): nonâplayer character movement, coordinated movement, pathfinding, world representations; decision making; tactical AI, strategic AI, learning in games. Physicsâbased techniques: collision detection and response. Networked gaming: multiâplayer games, networking and distributed game design, mobile gaming. Improving realism: cut scenes, 3D sound. A project is required. Laboratory: two hours per week."  ;
+  uni:hasTopic        uni:Game_engine  ;
+  uni:hasTopic        uni:Artificial_intelligence  ;
+  uni:hasTopic        uni:Artificial_intelligence  ;
+  uni:hasTopic        uni:Player_character  ;
+  uni:hasTopic        uni:Pathfinding  ;
+  uni:hasTopic        uni:Collision_detection  ;
+  uni:hasTopic        uni:Mobile_game  ;
+  uni:hasTopic        uni:Literary_realism  ;
+  uni:hasTopic        uni:3D_computer_graphics  .
+
+uni:COMP6341 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6341" ;
+  uni:name         "Computer Vision (*)" ;
+  uni:description  "This course introduces basic techniques and concepts in computer vision including image formation, grouping and fitting, geometric vision, recognition, perceptual organization, and the state-of-the art software tools. Students learn fundamental algorithms and techniques, and gain experience in programming vision-based components; in particular, how to program in OpenCV, a powerful software interface used to process data captured from passive and active sensors. A project is required. Laboratory: two hours per week."  ;
+  uni:hasTopic        uni:Computer_vision  ;
+  uni:hasTopic        uni:OpenCV  .
+
+uni:COMP6351 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6351" ;
+  uni:name         "Topics in Scientific Computation" ;
+  uni:description  "Selected elements of numerical methods that are central to scientific computation. The precise contents of the course may differ somewhat from one offering to the next, but will include the following topics: An introduction to the numerical solution of nonlinear equations, continuation methods, numerical solution of initial value problems in ordinary differential equations, finite difference method, numerical stability theory, stiff equations, boundary value problems in ordinary differential equations, collocation methods, introduction to the numerical solution of partial differential equations, with emphasis on nonlinear diffusion problems. A project is required."  ;
+  uni:hasTopic        uni:Numerical_analysis  ;
+  uni:hasTopic        uni:Computational_science  ;
+  uni:hasTopic        uni:Nonlinear_system  ;
+  uni:hasTopic        uni:Ordinary_differential_equation  ;
+  uni:hasTopic        uni:Finite_difference_method  ;
+  uni:hasTopic        uni:Numerical_stability  ;
+  uni:hasTopic        uni:Collocation_method  ;
+  uni:hasTopic        uni:Partial_differential_equation  ;
+  uni:hasTopic        uni:Diffusion_equation  .
+
+uni:COMP6361 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6361" ;
+  uni:name         "Numerical Analysis of Nonlinear Equations" ;
+  uni:description  "An introduction to numerical algorithms for nonlinear equations, including discrete as well as continuous systems. The emphasis is on computer-aided numerical analysis rather than numerical simulation. This course is suitable for scientists and engineers with a practical interest in nonlinear phenomena. Topics include computational aspects of: homotopy and continuation methods, fixed points and stationary solutions, asymptotic stability, bifurcations, periodic solutions, transition to chaos, conservative systems, travelling wave solutions, discretization techniques. A variety of applications will be considered. Numerical software packages will be available. A project is required."  ;
+  uni:hasTopic        uni:Nonlinear_system  ;
+  uni:hasTopic        uni:Numerical_analysis  ;
+  uni:hasTopic        uni:Computer_simulation  ;
+  uni:hasTopic        uni:Homotopy  ;
+  uni:hasTopic        uni:Lyapunov_stability  ;
+  uni:hasTopic        uni:Wave  ;
+  uni:hasTopic        uni:Discretization  .
+
+uni:COMP6381 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6381" ;
+  uni:name         "Digital Geometric Modelling" ;
+  uni:description  "This course introduces the digital geometry modelling pipeline focusing on fundamental data structures and algorithms for digital representation and processing of 3D geometry.  Students  study a wide range of applications and solutions in computer-aided design, engineering, architecture reverse engineering, and medical applications. As triangle meshes are by far the most popular representation for 3D geometry, this course focuses on triangle mesh representations and data structures that enable the programmer to efficiently query and edit geometry. In addition, the course covers spline modelling: Hermite splines, Bezier splines, and B-Splines. A project is required."  ;
+  uni:hasTopic        uni:Digital_geometry  ;
+  uni:hasTopic        uni:Graphics_pipeline  ;
+  uni:hasTopic        uni:Digital_electronics  ;
+  uni:hasTopic        uni:3D_modeling  ;
+  uni:hasTopic        uni:Geometry  ;
+  uni:hasTopic        uni:Fender_Wide_Range  ;
+  uni:hasTopic        uni:Computer-aided_design  ;
+  uni:hasTopic        uni:Reverse_engineering  ;
+  uni:hasTopic        uni:Computer_graphics  ;
+  uni:hasTopic        uni:Triangle_mesh  ;
+  uni:hasTopic        uni:Flat_spline  .
+
+uni:COMP6411 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6411" ;
+  uni:name         "Comparative Study of Programming Languages" .
+
+uni:COMP6421 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6421" ;
+  uni:name         "Compiler Design (*)" ;
+  uni:description  "Compiler organization and implementation: lexical analysis and parsing, syntax-directed translation, code optimization. Run-time systems. A project is required."  ;
+  uni:hasTopic        uni:Lexical_analysis  ;
+  uni:hasTopic        uni:Parsing  ;
+  uni:hasTopic        uni:Syntax-directed_translation  ;
+  uni:hasTopic        uni:Program_optimization  .
+
+uni:COMP6461 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6461" ;
+  uni:name         "Computer Networks and Protocols" ;
+  uni:description  "Direct link networks: encoding, framing, error detection, flow control, example networks. Packet switching and forwarding: bridges, switches. Internetworking: Internet Protocol, routing, addressing, IPv6, multicasting, mobile IP. End-to-end protocols: UDP, TCP. Network security concepts. Application-level protocols. Laboratory: two hours per week."  ;
+  uni:hasTopic        uni:Error_detection_and_correction  ;
+  uni:hasTopic        uni:Control_flow  ;
+  uni:hasTopic        uni:Packet_switching  ;
+  uni:hasTopic        uni:Internet_Protocol  ;
+  uni:hasTopic        uni:IPv6  ;
+  uni:hasTopic        uni:Multicast  ;
+  uni:hasTopic        uni:User_Datagram_Protocol  ;
+  uni:hasTopic        uni:Transmission_Control_Protocol  ;
+  uni:hasTopic        uni:Network_security  .
+
+uni:COMP6521 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6521" ;
+  uni:name         "Advanced Database Technology and Applications" ;
+  uni:description  "Review of standard relational databases, query languages. Query processing and optimization. Parallel and distributed databases. Information integration. Data warehouse systems. Data mining and OLAP. Web databases and XML Active and logical databases, spatial and multimedia data management. Laboratory: Two hours per week."  ;
+  uni:hasTopic        uni:Query_optimization  ;
+  uni:hasTopic        uni:Query_optimization  ;
+  uni:hasTopic        uni:Information_integration  ;
+  uni:hasTopic        uni:Data_warehouse  ;
+  uni:hasTopic        uni:Data_mining  ;
+  uni:hasTopic        uni:Online_analytical_processing  ;
+  uni:hasTopic        uni:XML  ;
+  uni:hasTopic        uni:Multimedia  ;
+  uni:hasTopic        uni:Data_management  .
+
+uni:COMP6531 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6531" ;
+  uni:name         "Foundations of the Semantic Web" ;
+  uni:description  "Web markup languages, World Wide Web Consortium (W3C) standards, Extensible Markup Language (XML) Resource Description Framework (RDF), schema for markup languages, Semantic Web, ontology development, markup languages for ontologies, Web Ontology Language (OWL), logical foundations of ontologies, description logics, reasoning with ontologies. A project is required."  ;
+  uni:hasTopic        uni:World_Wide_Web_Consortium  ;
+  uni:hasTopic        uni:XML  ;
+  uni:hasTopic        uni:Resource_Description_Framework  ;
+  uni:hasTopic        uni:XML_schema  ;
+  uni:hasTopic        uni:Semantic_Web  ;
+  uni:hasTopic        uni:Ontology_engineering  ;
+  uni:hasTopic        uni:Ontology  ;
+  uni:hasTopic        uni:Web_Ontology_Language  .
+
+uni:COMP6591 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6591" ;
+  uni:name         "Introduction to Knowledge-Base Systems" ;
+  uni:description  "Review of first-order logic, relational algebra, and relational calculus. Fundamentals of logic programming. Logic for knowledge representation. Architecture of a knowledge-base system. Fundamentals of deductive databases. Top-down and bottom-up query processing. Some important query processing strategies and their comparison. Project or term paper on current research topics."  ;
+  uni:hasTopic        uni:First-order_logic  ;
+  uni:hasTopic        uni:Relational_algebra  ;
+  uni:hasTopic        uni:Relational_calculus  ;
+  uni:hasTopic        uni:Logic_programming  ;
+  uni:hasTopic        uni:Knowledge_representation_and_reasoning  .
+
+uni:COMP6621 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6621" ;
+  uni:name         "Discrete Mathematics of Paul ErdÃ¶s" ;
+  uni:description  "Introduction to the methods and proof techniques of Paul ErdÃ¶s that are particularly applicable to Computer Science. Proof of Bertrandâs postulate. The ErdÃ¶s-Szekeres and the de Bruijn-ErdÃ¶s theorems. Ramseyâs theorem and Ramsey numbers. Van der Waerdenâs theorem and Van der Waerden numbers. Delta-systems and a proof of the ErdÃ¶s-LovÃ¡sz conjecture. The ErdÃ¶s-Ko-Rado theorem. Extremal graph theory. Random graphs and graph colouring. The probabilistic method and its applications in theoretical Computer Science. A project is required."  ;
+  uni:hasTopic        uni:Computer_science  ;
+  uni:hasTopic        uni:Theorem  ;
+  uni:hasTopic        uni:Ramsey_Abbey  ;
+  uni:hasTopic        uni:Van  ;
+  uni:hasTopic        uni:Conjecture  ;
+  uni:hasTopic        uni:Extremal_graph_theory  ;
+  uni:hasTopic        uni:Random_graph  ;
+  uni:hasTopic        uni:Graph_coloring  ;
+  uni:hasTopic        uni:Probabilistic_method  .
+
+uni:COMP6631 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6631" ;
+  uni:name         "Large-Scale Optimization" ;
+  uni:description  "Mathematical modelling of large-scale optimization models. Design and implementation of large-scale optimization techniques: decomposition methods (Benders, Dantzig-Wolfe, Lagrangian Relaxation, Column Generation), branch-and-price techniques. Large-scale linear and non-linear programming techniques for network optimization and integer/discrete programming. Techniques for nonlinear non-convex continuous optimization: branch-and-bound methods, DC (difference of convex functions) programming, bilinear and biconvex optimization. Heuristics and meta-heuristics. A project is required."  ;
+  uni:hasTopic        uni:Mathematical_model  ;
+  uni:hasTopic        uni:Mathematical_optimization  ;
+  uni:hasTopic        uni:Lagrangian_relaxation  ;
+  uni:hasTopic        uni:Nonlinear_programming  ;
+  uni:hasTopic        uni:Integer  ;
+  uni:hasTopic        uni:Nonlinear_system  ;
+  uni:hasTopic        uni:Continuous_optimization  ;
+  uni:hasTopic        uni:Branch_and_bound  ;
+  uni:hasTopic        uni:Direct_current  ;
+  uni:hasTopic        uni:Convex_optimization  ;
+  uni:hasTopic        uni:Bilinear_form  ;
+  uni:hasTopic        uni:Biconvex_optimization  ;
+  uni:hasTopic        uni:Heuristic  .
+
+uni:COMP6641 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6641" ;
+  uni:name         "Theory of Computation" ;
+  uni:description  "General properties of algorithmic computations. Turing machines, universal Turing machines. Turing computable functions as a standard family of algorithms. Primitive recursive functions. Churchâs thesis, recursive sets. Recursively enumerable sets and their properties. Riceâs theorem. Time and space complexity measures. Hierarchy of complexity measures. Advanced topics in complexity theory. A project is required."  ;
+  uni:hasTopic        uni:History_of_economic_thought  ;
+  uni:hasTopic        uni:Turing_machine  ;
+  uni:hasTopic        uni:Computable_function  ;
+  uni:hasTopic        uni:Computable_function  ;
+  uni:hasTopic        uni:Theorem  ;
+  uni:hasTopic        uni:Time  ;
+  uni:hasTopic        uni:Computational_complexity_theory  ;
+  uni:hasTopic        uni:Computational_complexity_theory  .
+
+uni:COMP6651 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6651" ;
+  uni:name         "Algorithm Design Techniques" ;
+  uni:description  "Mathematical preliminaries; Empirical and theoretical measures of algorithm efficiencies; Optimization and combinatorial techniques and algorithms including greedy algorithms, dynamic programming, branch-and-bound techniques and graph network algorithms; Amortized complexity analysis; String matching algorithms; NP-complete problems and approximate solutions; Probabilistic algorithms. A project is required."  ;
+  uni:hasTopic        uni:Algorithm  ;
+  uni:hasTopic        uni:Combinatorial_optimization  ;
+  uni:hasTopic        uni:Dynamic_programming  ;
+  uni:hasTopic        uni:Branch_and_bound  ;
+  uni:hasTopic        uni:Graph_theory  ;
+  uni:hasTopic        uni:Analysis_of_algorithms  ;
+  uni:hasTopic        uni:String_searching_algorithm  ;
+  uni:hasTopic        uni:NP-completeness  .
+
+uni:COMP6661 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6661" ;
+  uni:name         "Combinatorial Algorithms" ;
+  uni:description  "Representation and generation of combinatorial objects; search techniques; counting and estimation. Projects on selected applications from combinatorics and graph theory."  ;
+  uni:hasTopic        uni:Combinatorics  ;
+  uni:hasTopic        uni:Combinatorics  ;
+  uni:hasTopic        uni:Graph_theory  .
+
+uni:COMP6711 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6711" ;
+  uni:name         "Computational Geometry" ;
+  uni:description  "Efficient algorithms and data structures to solve geometric problems. Problems discussed include convex hulls, line intersections, polygon triangulation, point location, range searching, Voronoi diagrams, Delaunay triangulations, interval trees and segment trees, arrangements, robot motion planning, binary space partitions, quadtrees, and visitility. Algorithmic methods include plane sweep, incremental insertion, randomization, divide and conquer. Emphasis will be given to computation and complexity, with applications in computer graphics, computer aided design, geographic information systems, networks, mesh generation, databases, and robot motion planning. A project is required."  ;
+  uni:hasTopic        uni:Convex_set  ;
+  uni:hasTopic        uni:Polygon_triangulation  ;
+  uni:hasTopic        uni:Point_location  ;
+  uni:hasTopic        uni:Range_searching  ;
+  uni:hasTopic        uni:Voronoi_diagram  ;
+  uni:hasTopic        uni:Robert_Delaunay  ;
+  uni:hasTopic        uni:Polygon_triangulation  ;
+  uni:hasTopic        uni:Robotics  ;
+  uni:hasTopic        uni:Motion_planning  ;
+  uni:hasTopic        uni:Binary_number  ;
+  uni:hasTopic        uni:Sweep_line_algorithm  ;
+  uni:hasTopic        uni:Computer_graphics  ;
+  uni:hasTopic        uni:Computer-aided_design  ;
+  uni:hasTopic        uni:Mesh_generation  .
+
+uni:COMP6721 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6721" ;
+  uni:name         "Applied Artificial Intelligence (*)" ;
+  uni:description  "The course covers heuristic and adversarial searches for concrete applications. It then discusses automated reasoning, advanced knowledge representation and dealing with uncertainly for Artificial Intelligence applications. Finally, it introduces autoencoders, recurrent neural networks and sequence to sequence models. A project is required. Laboratory: two hours per week."  ;
+  uni:hasTopic        uni:Heuristic  ;
+  uni:hasTopic        uni:Automated_reasoning  ;
+  uni:hasTopic        uni:Knowledge_representation_and_reasoning  ;
+  uni:hasTopic        uni:Artificial_intelligence  ;
+  uni:hasTopic        uni:Recurrent_neural_network  .
+
+uni:COMP6731 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6731" ;
+  uni:name         "Pattern Recognition (*)" ;
+  uni:description  "Pre-processing. Feature extraction and selection. Similarity between patterns and distance measurements. Syntactic and statistical approaches. Clustering analysis. Bayesian decision theory and discriminant functions. Clustering and classification techniques. Applications. A project is required. Laboratory: two hours per week."  ;
+  uni:hasTopic        uni:Feature_extraction  ;
+  uni:hasTopic        uni:Bayes_estimator  ;
+  uni:hasTopic        uni:Discriminant  .
+
+uni:COMP6741 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6741" ;
+  uni:name         "Intelligent Systems (*)" ;
+  uni:description  "Knowledge representation and reasoning. Uncertainty and conflict resolution. Design of intelligent systems. Grammar-based, rule-based, and blackboard architectures. A project is required. Laboratory: two hours per week."  ;
+  uni:hasTopic        uni:Knowledge_representation_and_reasoning  ;
+  uni:hasTopic        uni:Conflict_resolution  ;
+  uni:hasTopic        uni:Blackboard  .
+
+uni:COMP6751 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6751" ;
+  uni:name         "Natural Language Analysis" ;
+  uni:description  "Introduction to natural language processing. Structure of English. Grammars and parsing. Lexical and compositional semantics. Pragmatic issues. Applications in text mining and information extraction. A project is required."  ;
+  uni:hasTopic        uni:Natural-language_processing  ;
+  uni:hasTopic        uni:English_language  ;
+  uni:hasTopic        uni:Parsing  ;
+  uni:hasTopic        uni:Principle_of_compositionality  ;
+  uni:hasTopic        uni:Text_mining  .
+
+uni:COMP6761 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6761" ;
+  uni:name         "Advanced 3D Graphics for Game Programming" ;
+  uni:description  "Fundamental algorithms, techniques, and software engineering principles for 3D graphics. Introduction to real-time graphics application architecture; review of basic 3D concepts of modelling, viewing, and rendering. 3D graphics functions, pipeline, and performance. Hierarchical 3D graphics. Algorithms for occlusion culling, collision detection, photorealism, shadows, and textures. Current trends and state-of-the-art graphics and physics algorithms. Laboratory: Two hours per week."  ;
+  uni:hasTopic        uni:Software_engineering  ;
+  uni:hasTopic        uni:3D_computer_graphics  ;
+  uni:hasTopic        uni:Applications_architecture  ;
+  uni:hasTopic        uni:3D_modeling  ;
+  uni:hasTopic        uni:Graphics_pipeline  ;
+  uni:hasTopic        uni:Hidden_surface_determination  ;
+  uni:hasTopic        uni:Collision_detection  ;
+  uni:hasTopic        uni:Photorealism  ;
+  uni:hasTopic        uni:Game_physics  .
+
+uni:COMP6771 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6771" ;
+  uni:name         "Image Processing (*) " ;
+  uni:description  "Digital image fundamentals; image enhancement: histogram processing, filtering in the spatial domain, filtering in the frequency domain; image restoration and reconstruction; image segmentation: line detection, Hough transform, edge detection and linking, thresholding, region splitting and merging; image compression; introduction to wavelet transform and multi-resolution processing. A project is required. Laboratory: two hours per week."  ;
+  uni:hasTopic        uni:Digital_image_processing  ;
+  uni:hasTopic        uni:Histogram  ;
+  uni:hasTopic        uni:Frequency_domain  ;
+  uni:hasTopic        uni:Image_segmentation  ;
+  uni:hasTopic        uni:Hough_transform  ;
+  uni:hasTopic        uni:Edge_detection  ;
+  uni:hasTopic        uni:Thresholding_image_processing  ;
+  uni:hasTopic        uni:Image_compression  ;
+  uni:hasTopic        uni:Wavelet_transform  .
+
+uni:COMP6781 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6781" ;
+  uni:name         "Statistical Natural Language Processing" ;
+  uni:description  "The course covers robust methods to natural language processing (NLP) and their applications to manipulate large text collections. Topics covered in this course include: Zipfâs law, information retrieval, statistical machine translation, N-gram language models and smoothing techniques, word sense disambiguation, part-of-speech tagging and probabilistic grammars and parsing. A project is required."  ;
+  uni:hasTopic        uni:Natural-language_processing  ;
+  uni:hasTopic        uni:Statistical_machine_translation  ;
+  uni:hasTopic        uni:N-gram  ;
+  uni:hasTopic        uni:Word-sense_disambiguation  ;
+  uni:hasTopic        uni:Part-of-speech_tagging  ;
+  uni:hasTopic        uni:Parsing  .
+
+uni:COMP6791 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6791" ;
+  uni:name         "Information Retrieval and Web Search (*)" ;
+  uni:description  "Basics of information retrieval (IR): Boolean, vector space and probabilistic models. Tokenization and creation of inverted files. Weighting schemes. Evaluation of IR systems: precision, recall, E-measure. Relevance feedback and query expansion. Application of IR to Web search engines: XML, link analysis, PageRank algorithm. Text categorization and clustering techniques as used in spam filtering. A project is required. Laboratory: two hours per week."  ;
+  uni:hasTopic        uni:Boolean_algebra  ;
+  uni:hasTopic        uni:Vector_space  ;
+  uni:hasTopic        uni:Lexical_analysis  ;
+  uni:hasTopic        uni:Weighting  ;
+  uni:hasTopic        uni:Relevance_feedback  ;
+  uni:hasTopic        uni:Query_expansion  ;
+  uni:hasTopic        uni:XML  ;
+  uni:hasTopic        uni:Link_analysis  ;
+  uni:hasTopic        uni:PageRank  ;
+  uni:hasTopic        uni:Algorithm  ;
+  uni:hasTopic        uni:Anti-spam_techniques  .
+
+uni:COMP6811 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6811" ;
+  uni:name         "Bioinformatics Algorithms" ;
+  uni:description  "The principal objectives of the course are to cover the major algorithms used in bioinformatics; sequence alignment, multiple sequence alignment, phylogeny; classifying patterns in sequences; secondary structure prediction; 3D structure prediction; analysis of gene expression data. This includes dynamic programming, machine learning, simulated annealing, and clustering algorithms. Algorithmic principles will be emphasized. A project is required."  ;
+  uni:hasTopic        uni:Bioinformatics  ;
+  uni:hasTopic        uni:Multiple_sequence_alignment  ;
+  uni:hasTopic        uni:Multiple_sequence_alignment  ;
+  uni:hasTopic        uni:Phylogenetic_tree  ;
+  uni:hasTopic        uni:Protein_structure_prediction  ;
+  uni:hasTopic        uni:Three-dimensional_space  ;
+  uni:hasTopic        uni:Gene  ;
+  uni:hasTopic        uni:Gene_expression  ;
+  uni:hasTopic        uni:Dynamic_programming  ;
+  uni:hasTopic        uni:Machine_learning  ;
+  uni:hasTopic        uni:Simulated_annealing  .
+
+uni:COMP6821 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6821" ;
+  uni:name         "Bioinformatics Databases and Systems" ;
+  uni:description  "The principal objectives of the course are to survey the needs of bioinformatics for data management, knowledge management, and computational support; to provide in-depth description of an example of each kind of database and system; and to introduce advanced database technology and software technology relevant to the needs of bioinformatics. A project is required."  ;
+  uni:hasTopic        uni:Bioinformatics  ;
+  uni:hasTopic        uni:Data_management  ;
+  uni:hasTopic        uni:Knowledge_management  ;
+  uni:hasTopic        uni:Database  .
+
+uni:COMP691 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "691" ;
+  uni:name         "Topics in Computer Science I" ;
+  uni:description  "Subject matter will vary from term to term and from year to year. Students may re-register for this course, providing that course content has changed. Changes in content will be indicated by the letter following the course number, e.g., COMP 691A, COMP 691B, etc."  ;
+  uni:hasTopic        uni:College_of_Osteopathic_Medicine_of_the_Pacific  .
+
+uni:COMP6961 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6961" ;
+  uni:name         "Graduate Seminar in Computer Science" ;
+  uni:description  "Students will have to attend a selected set of departmental seminars and submit a comprehensive report on the topics presented in one of the seminars. This course is graded on a pass/fail basis."  ;
+  uni:hasTopic        uni:Failure  .
+
+uni:COMP6971 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "6971" ;
+  uni:name         "Project and Report " ;
+  uni:description  "See Requirements for the Master of/Magisteriate in Applied Computer Science (MApCompSc) section. Project: 8 hours per week."  ;
+  uni:hasTopic        uni:Computer_science  .
+
+uni:COMP7241 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "7241" ;
+  uni:name         "Parallel Algorithms and Architectures" ;
+  uni:description  "Parallel architectures; memory organization, interconnection structures, data routing techniques. Parallel algorithms; paradigms and design techniques, complexity analysis, algorithms for various computation models. A project is required."  ;
+  uni:hasTopic        uni:Computer_memory  ;
+  uni:hasTopic        uni:Analysis_of_algorithms  .
+
+uni:COMP7251 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "7251" ;
+  uni:name         "Mobile Computing and Wireless Networks" ;
+  uni:description  "Introduction to mobile computing and wireless networks:local (LAN), personal (PAN) and metropolitan (MAN). Mobile ad hoc networks and sensor networks. Algorithms and protocols for medium access, routing, topology control, and reliable transport. A project is required."  ;
+  uni:hasTopic        uni:Mobile_computing  ;
+  uni:hasTopic        uni:Wireless_LAN  ;
+  uni:hasTopic        uni:Personal_area_network  ;
+  uni:hasTopic        uni:Metropolitan_area_network  ;
+  uni:hasTopic        uni:Wireless_sensor_network  ;
+  uni:hasTopic        uni:Network_topology  .
+
+uni:COMP7451 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "7451" ;
+  uni:name         "Semantics of Programming Languages" ;
+  uni:description  "The need for semantic descriptions of programming languages. Classification of semantics: operational, axiomatic, model-theoretic, algebraic, denotational. Classification of languages: procedural, functional, logic, equational. Applications: verification, construction, language design, temporal logic for distributed systems, semantics for advanced languages."  ;
+  uni:hasTopic        uni:Semantics  ;
+  uni:hasTopic        uni:Semantics  ;
+  uni:hasTopic        uni:Model_theory  ;
+  uni:hasTopic        uni:Logic  ;
+  uni:hasTopic        uni:Temporal_logic  ;
+  uni:hasTopic        uni:Distributed_computing  .
+
+uni:COMP7521 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "7521" ;
+  uni:name         "Cryptography and Data Security" ;
+  uni:description  "Traditional cryptography. Information theory. Private-key (symmetric-key) and public-key (asymmetric-key) cryptographic algorithms. Advanced Encryption Standard (Rijndael). Cryptographic hash functions. Digital signatures. Data-origin authentication and data integrity. Entity authentication. Key distribution, management, recovery, and exhaustion. Authentication protocols. Security services (confidentiality, authentication, integrity, access control, non-repudiation, and availability) and mechanisms (encryption, data-integrity mechanisms, digital signatures, keyed hashes, access-control mechanisms, challenge-response authentication, traffic padding, and routing control). Projects will be offered in selected topics in cryptography."  ;
+  uni:hasTopic        uni:Cryptography  ;
+  uni:hasTopic        uni:Information_theory  ;
+  uni:hasTopic        uni:Symmetric-key_algorithm  ;
+  uni:hasTopic        uni:Cryptography  ;
+  uni:hasTopic        uni:Advanced_Encryption_Standard  ;
+  uni:hasTopic        uni:Advanced_Encryption_Standard  ;
+  uni:hasTopic        uni:Cryptographic_hash_function  ;
+  uni:hasTopic        uni:Authentication  ;
+  uni:hasTopic        uni:Data_integrity  ;
+  uni:hasTopic        uni:Key_distribution  ;
+  uni:hasTopic        uni:Confidentiality  ;
+  uni:hasTopic        uni:Access_control  ;
+  uni:hasTopic        uni:Non-repudiation  ;
+  uni:hasTopic        uni:Public-key_cryptography  ;
+  uni:hasTopic        uni:Digital_data  ;
+  uni:hasTopic        uni:Challenge_response_authentication  .
+
+uni:COMP7531 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "7531" ;
+  uni:name         "Database Systems Principles" ;
+  uni:description  "Database models. Algebraic, logical, and deductive database languages. Query equivalence and optimization. Query rewriting, information integration and data exchange. Incomplete information and complex values. Introduction to current research topics. A project is required."  ;
+  uni:hasTopic        uni:Deductive_database  ;
+  uni:hasTopic        uni:Query_optimization  ;
+  uni:hasTopic        uni:Incomplete_Backstreet_Boys_song  .
+
+uni:COMP7651 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "7651" ;
+  uni:name         "Advanced Analysis of Algorithms" ;
+  uni:description  "Amortized analysis of algorithms, NP-hardness and approximation algorithms, online algorithms, randomized algorithms. Selected topics of current interest. Project or term paper."  ;
+  uni:hasTopic        uni:Amortized_analysis  .
+
+uni:COMP7661 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "7661" ;
+  uni:name         "Advanced Rendering and Animation" ;
+  uni:description  "Advanced concepts in rendering and animation with emphasis on computational techniques for synthesizing complex realistic images, both static and dynamic. Topics include: overview of computer graphics techniques in games, cinema, and engineering; realistic rendering methods in real time; animation techniques including physics-based animation. A project is required."  ;
+  uni:hasTopic        uni:Computer_graphics  .
+
+uni:COMP7751 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "7751" ;
+  uni:name         "Advanced Pattern Recognition " ;
+  uni:description  "Pattern recognition principles; modern methods in digitization and data acquisition; advanced topics in feature extraction and selection; principal component analysis and clustering techniques; multiple classifiers and expert systems; advanced topics in neural networks in pattern recognition, performance evaluation and error reduction. Applications. A project is required."  ;
+  uni:hasTopic        uni:Pattern_recognition  ;
+  uni:hasTopic        uni:Data_acquisition  ;
+  uni:hasTopic        uni:Feature_extraction  ;
+  uni:hasTopic        uni:Principal_component_analysis  ;
+  uni:hasTopic        uni:Expert_system  ;
+  uni:hasTopic        uni:Artificial_neural_network  .
+
+uni:COMP7781 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "7781" ;
+  uni:name         "Advanced Image Processing" ;
+  uni:description  "Digital image processing; segmentation morphological processing; wavelet transforms and multi-resolution analysis; partial differential equation approach; variational methods; diffusion and shock filters; Markov random field and Bayesian inference; energy minimization framework: snakes, active contours, Mumford-Shah model, level set method; numerical implementation; applications; image inpainting; registration; and document processing. A project is required."  ;
+  uni:hasTopic        uni:Digital_image_processing  ;
+  uni:hasTopic        uni:Shape  ;
+  uni:hasTopic        uni:Wavelet  ;
+  uni:hasTopic        uni:Multiresolution_analysis  ;
+  uni:hasTopic        uni:Partial_differential_equation  ;
+  uni:hasTopic        uni:Calculus_of_variations  ;
+  uni:hasTopic        uni:Diffusion_equation  ;
+  uni:hasTopic        uni:Markov_random_field  ;
+  uni:hasTopic        uni:Bayesian_inference  ;
+  uni:hasTopic        uni:Energy  ;
+  uni:hasTopic        uni:Level-set_method  ;
+  uni:hasTopic        uni:Inpainting  .
+
+uni:COMP791 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "791" ;
+  uni:name         "Topics in Computer Science II" ;
+  uni:description  "Subject matter will vary from term to term and from year to year. Students may re-register for this course, providing that course content has changed. Changes in content will be indicated by the letter following the course number, e.g. COMP 791A, COMP 791B, etc."  ;
+  uni:hasTopic        uni:College_of_Osteopathic_Medicine_of_the_Pacific  .
+
+uni:COMP7941 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "7941" ;
+  uni:name         "Masterâs Research and Thesis" ;
+  uni:description  "Students are required to submit a thesis prepared under the guidance of a faculty member appointed by the GCS Graduate Studies Committee. The thesis must represent the result of the studentâs independent work undertaken after admission to the program. The thesis will be evaluated by a committee appointed by the GCS Graduate Studies Committee."  .
+
+uni:COMP8901 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "COMP" ;
+  uni:number       "8901" ;
+  uni:name         "Doctoral Research and Thesis" .
+
+uni:SOEN6011 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "6011" ;
+  uni:name         "Software Engineering Processes" ;
+  uni:description  "Introduction to software engineering concepts, modern management processes and software lifecycles. Tracking of software requirements and development through issue trackers. Version control practices include integration of feature branching. Validation practices including testing frameworks and code review. Continuous integration and build environments. A practical component on setting up a development environment similar to those used in professional environments. Case studies of successful management processes from open source projects and industry. A project is required."  ;
+  uni:hasTopic        uni:Software_engineering  ;
+  uni:hasTopic        uni:Version_control  ;
+  uni:hasTopic        uni:Code_review  ;
+  uni:hasTopic        uni:Continuous_integration  ;
+  uni:hasTopic        uni:Open-source_model  .
+
+uni:SOEN6021 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "6021" ;
+  uni:name         "Software Re-engineering" .
+
+uni:SOEN6211 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "6211" ;
+  uni:name         "Semantic Computing" ;
+  uni:description  "System analysis, architecture, and engineering for semantic software products. Text Mining systems and their architectures. Tagging and Tag Analysis. Recommender Systems and Collaborative Filtering. Crawling the Blogosphere and Opinion Mining. Applying Clustering, Machine Learning, Classification, and Regression. The Web of Data and Semantic Web Technologies: RDF, RDFS, SPARQL. Linked Open Data (LOD). Design and Re-Use of Semantic Web Vocabularies and Ontologies. Semantic Desktops and Semantic Web Information Systems. Semantic Application Development. Application case studies in biomedical research, software development, business intelligence, online gaming, e-commerce and e-science. Research paper seminar. Empirical evaluation methodologies for semantic systems. A project is required."  ;
+  uni:hasTopic        uni:System_analysis  ;
+  uni:hasTopic        uni:Semantic_Web  ;
+  uni:hasTopic        uni:Text_mining  ;
+  uni:hasTopic        uni:Collaborative_filtering  ;
+  uni:hasTopic        uni:Blogosphere  ;
+  uni:hasTopic        uni:Machine_learning  ;
+  uni:hasTopic        uni:World_Wide_Web  ;
+  uni:hasTopic        uni:Semantic_Web  ;
+  uni:hasTopic        uni:Resource_Description_Framework  ;
+  uni:hasTopic        uni:RDF_Schema  ;
+  uni:hasTopic        uni:SPARQL  ;
+  uni:hasTopic        uni:Linked_data  ;
+  uni:hasTopic        uni:Linked_data  ;
+  uni:hasTopic        uni:Ontology  ;
+  uni:hasTopic        uni:Software_development  ;
+  uni:hasTopic        uni:Business_intelligence  ;
+  uni:hasTopic        uni:E-commerce  ;
+  uni:hasTopic        uni:E-Science  .
+
+uni:SOEN6311 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "6311" ;
+  uni:name         "Formal Methods" ;
+  uni:description  "Components of formal systems: formal methods; levels of formalism. Integrating formal methods into the existing software life-cycle process model for a given project. Attributes of a formal specification language. Formal notations based on extended finite-state machines; case studies involving the design of user interfaces, reactive systems, and concurrent systems. Software development using formal methods, including tools for: type checking; debugging; verifying checkable properties; validation of refinements; and code generation from refinements. A project is required."  ;
+  uni:hasTopic        uni:Formal_methods  ;
+  uni:hasTopic        uni:Software_release_life_cycle  ;
+  uni:hasTopic        uni:Software_development_process  ;
+  uni:hasTopic        uni:Formal_specification  ;
+  uni:hasTopic        uni:Finite-state_machine  ;
+  uni:hasTopic        uni:Software_development  ;
+  uni:hasTopic        uni:Type_system  ;
+  uni:hasTopic        uni:Debugging  ;
+  uni:hasTopic        uni:Automatic_programming  .
+
+uni:SOEN6431 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "6431" ;
+  uni:name         "Software Comprehension and Maintenance" ;
+  uni:description  "The course addresses both technical and managerial views of software comprehension and software maintenance issues. Topics covered in this course include: cognitive models, software visualization, CASE tools, reverse engineering, static and dynamic source code analysis, software configuration management, and introduction to current research topics in software maintenance and program comprehension. A project is required."  ;
+  uni:hasTopic        uni:Software_maintenance  ;
+  uni:hasTopic        uni:Cognition  ;
+  uni:hasTopic        uni:Software_visualization  ;
+  uni:hasTopic        uni:Computer-aided_software_engineering  ;
+  uni:hasTopic        uni:Reverse_engineering  ;
+  uni:hasTopic        uni:Static_program_analysis  ;
+  uni:hasTopic        uni:Software_configuration_management  ;
+  uni:hasTopic        uni:Program_comprehension  .
+
+uni:SOEN6441 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "6441" ;
+  uni:name         "Advanced Programming Practices" ;
+  uni:description  "Problems of writing and managing code. Managing code complexity and quality through a programming process. Self-documenting code, and documentation generation. Software configuration management. Best practices for writing unit tests to control code quality. Advanced practices such as multi-threading concurrency, code reuse, and fault tolerance. A project is required. Laboratory: two hours per week."  ;
+  uni:hasTopic        uni:Self-documenting_code  ;
+  uni:hasTopic        uni:Software_configuration_management  ;
+  uni:hasTopic        uni:Unit_testing  ;
+  uni:hasTopic        uni:Thread_computing  ;
+  uni:hasTopic        uni:Parallel_computing  ;
+  uni:hasTopic        uni:Code_reuse  ;
+  uni:hasTopic        uni:Fault_tolerance  .
+
+uni:SOEN6461 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "6461" ;
+  uni:name         "Software Design Methodologies" ;
+  uni:description  "Introduction to software design processes and their models. Representations of design/architecture. Software architectures and design plans. Design methods, object-oriented application frameworks, design patterns, design quality and assurance, coupling and cohesion measurements, design verification and documentation. A design project."  ;
+  uni:hasTopic        uni:Software_design  ;
+  uni:hasTopic        uni:Design_methods  ;
+  uni:hasTopic        uni:Object-oriented_programming  ;
+  uni:hasTopic        uni:Software_design_pattern  .
+
+uni:SOEN6471 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "6471" ;
+  uni:name         "Advanced Software Architectures" ;
+  uni:description  "Study of architectural view models, architectural styles and frameworks; Architectural case studies and extraction of concrete architecture; Architectural design patterns; Model Driven Architecture (MDA), Service Oriented Architecture (SOA). Domain specific architectures such as mobile and cloud computing. A project is required."  ;
+  uni:hasTopic        uni:Software_design_pattern  ;
+  uni:hasTopic        uni:Model-driven_architecture  ;
+  uni:hasTopic        uni:Service-oriented_architecture  ;
+  uni:hasTopic        uni:Service-oriented_architecture  ;
+  uni:hasTopic        uni:Cloud_computing  .
+
+uni:SOEN6481 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "6481" ;
+  uni:name         "Software Systems Requirements Specification" ;
+  uni:description  "The requirements engineering (RE) process. Requirements engineering in different software lifecycle models. Problem analysis. Requirements elicitation. Requirements evaluation. Inconsistency management. Risk analysis. Requirements prioritization and negotiation. Requirements specification: natural language documentation, IEEE and ISO standards. Use cases. Agile processes and user stories. Introduction to formal specification: logics, formal languages. Requirements quality assurance. RE tools. Requirements evolution. Traceability. Domain modelling: UML, ontologies, domain-specific languages. Modelling behaviour. Acceptance criteria. Test cases. Cost models. A project is required."  ;
+  uni:hasTopic        uni:Requirements_engineering  ;
+  uni:hasTopic        uni:Software_development_process  ;
+  uni:hasTopic        uni:Requirements_elicitation  ;
+  uni:hasTopic        uni:Risk_analysis  ;
+  uni:hasTopic        uni:Language_documentation  ;
+  uni:hasTopic        uni:Institute_of_Electrical_and_Electronics_Engineers  ;
+  uni:hasTopic        uni:International_Organization_for_Standardization  ;
+  uni:hasTopic        uni:Agile_software_development  ;
+  uni:hasTopic        uni:User_story  ;
+  uni:hasTopic        uni:Formal_specification  ;
+  uni:hasTopic        uni:Formal_language  ;
+  uni:hasTopic        uni:Quality_assurance  ;
+  uni:hasTopic        uni:Evolution  ;
+  uni:hasTopic        uni:Unified_Modeling_Language  ;
+  uni:hasTopic        uni:Upper_ontology  ;
+  uni:hasTopic        uni:Domain-specific_language  ;
+  uni:hasTopic        uni:Test_cricket  .
+
+uni:SOEN6491 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "6491" ;
+  uni:name         "Software Refactoring" ;
+  uni:description  "Topics include an introduction to preventive maintenance, design problems, and refactorings; techniques for the detection of design problems and refactoring opportunities; management of preventive maintenance: visualization, prioritization, ranking, and evolution tracking of design problems; empirical studies on refactoring activities and practices; implementation of source code analysis techniques and refactorings. A project is required."  ;
+  uni:hasTopic        uni:Preventive_maintenance  ;
+  uni:hasTopic        uni:Evolution  ;
+  uni:hasTopic        uni:Static_program_analysis  .
+
+uni:SOEN6501 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "6501" ;
+  uni:name         "Programming Competency Test" ;
+  uni:description  "See Requirements for the Master of/Magisteriate in Applied Computer Science (MApCompSc) or Master of/Magisteriate in Engineering (Software Engineering) sections."  ;
+  uni:hasTopic        uni:Computer_science  ;
+  uni:hasTopic        uni:Software_engineering  .
+
+uni:SOEN6611 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "6611" ;
+  uni:name         "Software Measurement" ;
+  uni:description  "Role of measurement in Software Engineering, theoretical, technical and managerial views on software measurement. Representational theory of measurement. Theoretical validation of software measurement. Goal-driven measurement. Collecting and analyzing software engineering data. Software quality modelling and measuring. Testing and measurement. Reliability models. Functional size measurement methods. Effort estimation models and their usage in project management. Software measurement standards. Tool support. Case studies. A project is required."  ;
+  uni:hasTopic        uni:Software_engineering  ;
+  uni:hasTopic        uni:Software_measurement  ;
+  uni:hasTopic        uni:Project_management  .
+
+uni:SOEN6751 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "6751" ;
+  uni:name         "Human Computer Interface Design " ;
+  uni:description  "Introduction to human computer interaction. User-centered design process. User modelling. Task analysis. User interface design knowledge (principles, guidelines and patterns). User interface prototyping. User interface evaluation. A project is required. Laboratory: two hours per week."  ;
+  uni:hasTopic        uni:Human_computer  ;
+  uni:hasTopic        uni:User-centered_design  ;
+  uni:hasTopic        uni:Task_analysis  ;
+  uni:hasTopic        uni:User_interface_design  ;
+  uni:hasTopic        uni:User_interface  .
+
+uni:SOEN6761 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "6761" ;
+  uni:name         "Multimedia Computing" ;
+  uni:description  "This course covers the state-of-the-art technology for multimedia computing. The course topics will cover current media types, images, video, audio, graphics and 3D models in terms of algorithms and data structures for their capture, representation, creation, storage, archival, transmission, assembling, presentation and retrieval. This course will cover fundamental ideas in multimedia technology applicable to computer science and software engineering. A project is required."  ;
+  uni:hasTopic        uni:Multimedia  ;
+  uni:hasTopic        uni:3D_modeling  ;
+  uni:hasTopic        uni:Computer_science  ;
+  uni:hasTopic        uni:Software_engineering  .
+
+uni:SOEN6841 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "6841" ;
+  uni:name         "Software Project Management" ;
+  uni:description  "Fundamental concepts of management activities, demonstrating how it can relate to software engineering and how the two can be mutually supportive throughout software development and maintenance. Overview of object-oriented development; software development processes; quality considerations; activity planning; risk management; monitoring and control; maintenance and evolution; issues of professional ethics and practice, and legal issues. A project is required."  .
+
+uni:SOEN6861 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "6861" ;
+  uni:name         "Services Computing: Foundations, Design and Implementations" ;
+  uni:description  "System design with Service Oriented Architecture. Open standards for Web services. Development of SOAP (Service-Oriented Architecture and Programming) and RESTful (REpresentational State Transfer) services. Business process modelling and management. Service composition. Formal models for services. A project is required."  ;
+  uni:hasTopic        uni:Service-oriented_architecture  ;
+  uni:hasTopic        uni:Web_service  ;
+  uni:hasTopic        uni:SOAP  ;
+  uni:hasTopic        uni:Service-oriented_architecture  ;
+  uni:hasTopic        uni:Representational_state_transfer  ;
+  uni:hasTopic        uni:Process_modeling  .
+
+uni:SOEN691 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "691" ;
+  uni:name         "Topics in Software Engineering " ;
+  uni:description  "Subject matter will vary from term to term and from year to year. Students may re-register for this course, providing that the course content has changed. Changes in content will be indicated by the letter following the course number, e.g. SOEN 691A, SOEN 691B, etc."  .
+
+uni:SOEN6951 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "6951" ;
+  uni:name         "Software Engineering Case Study" ;
+  uni:description  "Students will complete a case study of a software project. Whenever possible, the project should be conducted in an industrial environment with the cooperation of the studentâs employer."  .
+
+uni:SOEN6971 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "6971" ;
+  uni:name         "Project and Report " ;
+  uni:description  "See Requirements for the Degree of Master of/Magisteriate in Applied Computer Science (MApCompSc) section. Project: 8 hours per week."  ;
+  uni:hasTopic        uni:Computer_science  .
+
+uni:SOEN7481 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "7481" ;
+  uni:name         "Software Verification and Testing" ;
+  uni:description  "Overview of current software engineering testing methods, techniques and standards for testing system implementations. Classical white-box testing; dataflow testing; classical black-box testing; integration testing; system testing. Testing measures; test plan. IEEE standard. Object-oriented testing. Test-driven development. Testing quality measures. Test reduction techniques. Techniques for test automation. Tools and techniques for formal verification of software system designs: model checking and theorem proving. A project is required."  .
+
+uni:SOEN7761 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "7761" ;
+  uni:name         "Intelligent User Interfaces" ;
+  uni:description  "Intelligent systems and intelligent interfaces. A brief introduction to knowledge representation and reasoning. Creation and adaptation of user models. Software agents at the user interface. Applications of these concepts in the development of intelligent user interfaces. Adaptive user interfaces. Selected advanced topics, such as natural language interfaces, speech based user interfaces, and mobile user interfaces. Laboratory: two hours per week. A project is required."  .
+
+uni:SOEN791 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "791" ;
+  uni:name         "Topics in Software Engineering II" ;
+  uni:description  "Subject matter will vary from term to term and from year to year. Students may re-register for this course, providing that the course content has changed. Changes in content will be indicated by the letter following the course number, e.g. SOEN 791A, SOEN 791B, etc."  ;
+  uni:hasTopic        uni:Soen  .
+
+uni:SOEN7941 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "7941" ;
+  uni:name         "Masterâs Research and Thesis" ;
+  uni:description  "Students are required to submit a thesis prepared under the guidance of a faculty member appointed by the GCS Graduate Studies Committee. The thesis must represent the result of the studentâs independent work undertaken after admission to the program. The thesis will be evaluated by a committee appointed by the GCS Graduate Studies Committee."  .
+
+uni:SOEN8901 a uni:Course ;
+  uni:taught_at    dbr:Concordia_University ;
+  uni:subject      "SOEN" ;
+  uni:number       "8901" ;
+  uni:name         "Doctoral Research and Thesis" .
+
+uni:Distributed_computing a uni:topic .
+uni:Distributed_computing rdfs:label "Distributed_computing" . 
+uni:Distributed_computing uni:link <http://dbpedia.org/resource/Distributed_computing> . 
+uni:Scalability a uni:topic .
+uni:Scalability rdfs:label "Scalability" . 
+uni:Scalability uni:link <http://dbpedia.org/resource/Scalability> . 
+uni:Concurrent_computing a uni:topic .
+uni:Concurrent_computing rdfs:label "Concurrent_computing" . 
+uni:Concurrent_computing uni:link <http://dbpedia.org/resource/Concurrent_computing> . 
+uni:Fault_tolerance a uni:topic .
+uni:Fault_tolerance rdfs:label "Fault_tolerance" . 
+uni:Fault_tolerance uni:link <http://dbpedia.org/resource/Fault_tolerance> . 
+uni:Client_server_model a uni:topic .
+uni:Client_server_model rdfs:label "Client_server_model" . 
+uni:Client_server_model uni:link <http://dbpedia.org/resource/Client_server_model> . 
+uni:Inter-process_communication a uni:topic .
+uni:Inter-process_communication rdfs:label "Inter-process_communication" . 
+uni:Inter-process_communication uni:link <http://dbpedia.org/resource/Inter-process_communication> . 
+uni:Communication a uni:topic .
+uni:Communication rdfs:label "Communication" . 
+uni:Communication uni:link <http://dbpedia.org/resource/Communication> . 
+uni:Remote_procedure_call a uni:topic .
+uni:Remote_procedure_call rdfs:label "Remote_procedure_call" . 
+uni:Remote_procedure_call uni:link <http://dbpedia.org/resource/Remote_procedure_call> . 
+uni:Common_Object_Request_Broker_Architecture a uni:topic .
+uni:Common_Object_Request_Broker_Architecture rdfs:label "Common_Object_Request_Broker_Architecture" . 
+uni:Common_Object_Request_Broker_Architecture uni:link <http://dbpedia.org/resource/Common_Object_Request_Broker_Architecture> . 
+uni:Web_server a uni:topic .
+uni:Web_server rdfs:label "Web_server" . 
+uni:Web_server uni:link <http://dbpedia.org/resource/Web_server> . 
+uni:Concurrency_control a uni:topic .
+uni:Concurrency_control rdfs:label "Concurrency_control" . 
+uni:Concurrency_control uni:link <http://dbpedia.org/resource/Concurrency_control> . 
+uni:Fault_tolerance a uni:topic .
+uni:Fault_tolerance rdfs:label "Fault_tolerance" . 
+uni:Fault_tolerance uni:link <http://dbpedia.org/resource/Fault_tolerance> . 
+uni:Distributed_computing a uni:topic .
+uni:Distributed_computing rdfs:label "Distributed_computing" . 
+uni:Distributed_computing uni:link <http://dbpedia.org/resource/Distributed_computing> . 
+uni:Balthasar_Neumann a uni:topic .
+uni:Balthasar_Neumann rdfs:label "Balthasar_Neumann" . 
+uni:Balthasar_Neumann uni:link <http://dbpedia.org/resource/Balthasar_Neumann> . 
+uni:Parallel_computing a uni:topic .
+uni:Parallel_computing rdfs:label "Parallel_computing" . 
+uni:Parallel_computing uni:link <http://dbpedia.org/resource/Parallel_computing> . 
+uni:Message_passing a uni:topic .
+uni:Message_passing rdfs:label "Message_passing" . 
+uni:Message_passing uni:link <http://dbpedia.org/resource/Message_passing> . 
+uni:MIMD a uni:topic .
+uni:MIMD rdfs:label "MIMD" . 
+uni:MIMD uni:link <http://dbpedia.org/resource/MIMD> . 
+uni:Commodity_computing a uni:topic .
+uni:Commodity_computing rdfs:label "Commodity_computing" . 
+uni:Commodity_computing uni:link <http://dbpedia.org/resource/Commodity_computing> . 
+uni:Multi-core_processor a uni:topic .
+uni:Multi-core_processor rdfs:label "Multi-core_processor" . 
+uni:Multi-core_processor uni:link <http://dbpedia.org/resource/Multi-core_processor> . 
+uni:Heterogeneous_computing a uni:topic .
+uni:Heterogeneous_computing rdfs:label "Heterogeneous_computing" . 
+uni:Heterogeneous_computing uni:link <http://dbpedia.org/resource/Heterogeneous_computing> . 
+uni:Computer_memory a uni:topic .
+uni:Computer_memory rdfs:label "Computer_memory" . 
+uni:Computer_memory uni:link <http://dbpedia.org/resource/Computer_memory> . 
+uni:Weight_distribution a uni:topic .
+uni:Weight_distribution rdfs:label "Weight_distribution" . 
+uni:Weight_distribution uni:link <http://dbpedia.org/resource/Weight_distribution> . 
+uni:Message_passing a uni:topic .
+uni:Message_passing rdfs:label "Message_passing" . 
+uni:Message_passing uni:link <http://dbpedia.org/resource/Message_passing> . 
+uni:Scalability a uni:topic .
+uni:Scalability rdfs:label "Scalability" . 
+uni:Scalability uni:link <http://dbpedia.org/resource/Scalability> . 
+uni:Parallel_computing a uni:topic .
+uni:Parallel_computing rdfs:label "Parallel_computing" . 
+uni:Parallel_computing uni:link <http://dbpedia.org/resource/Parallel_computing> . 
+uni:Traditional_animation a uni:topic .
+uni:Traditional_animation rdfs:label "Traditional_animation" . 
+uni:Traditional_animation uni:link <http://dbpedia.org/resource/Traditional_animation> . 
+uni:Graphics_pipeline a uni:topic .
+uni:Graphics_pipeline rdfs:label "Graphics_pipeline" . 
+uni:Graphics_pipeline uni:link <http://dbpedia.org/resource/Graphics_pipeline> . 
+uni:Interpolation a uni:topic .
+uni:Interpolation rdfs:label "Interpolation" . 
+uni:Interpolation uni:link <http://dbpedia.org/resource/Interpolation> . 
+uni:Inverse_kinematics a uni:topic .
+uni:Inverse_kinematics rdfs:label "Inverse_kinematics" . 
+uni:Inverse_kinematics uni:link <http://dbpedia.org/resource/Inverse_kinematics> . 
+uni:Motion_control a uni:topic .
+uni:Motion_control rdfs:label "Motion_control" . 
+uni:Motion_control uni:link <http://dbpedia.org/resource/Motion_control> . 
+uni:Free-form_deformation a uni:topic .
+uni:Free-form_deformation rdfs:label "Free-form_deformation" . 
+uni:Free-form_deformation uni:link <http://dbpedia.org/resource/Free-form_deformation> . 
+uni:Machine_learning a uni:topic .
+uni:Machine_learning rdfs:label "Machine_learning" . 
+uni:Machine_learning uni:link <http://dbpedia.org/resource/Machine_learning> . 
+uni:Polynomial_regression a uni:topic .
+uni:Polynomial_regression rdfs:label "Polynomial_regression" . 
+uni:Polynomial_regression uni:link <http://dbpedia.org/resource/Polynomial_regression> . 
+uni:Overfitting a uni:topic .
+uni:Overfitting rdfs:label "Overfitting" . 
+uni:Overfitting uni:link <http://dbpedia.org/resource/Overfitting> . 
+uni:Model_selection a uni:topic .
+uni:Model_selection rdfs:label "Model_selection" . 
+uni:Model_selection uni:link <http://dbpedia.org/resource/Model_selection> . 
+uni:Logistic_regression a uni:topic .
+uni:Logistic_regression rdfs:label "Logistic_regression" . 
+uni:Logistic_regression uni:link <http://dbpedia.org/resource/Logistic_regression> . 
+uni:Decision_tree_learning a uni:topic .
+uni:Decision_tree_learning rdfs:label "Decision_tree_learning" . 
+uni:Decision_tree_learning uni:link <http://dbpedia.org/resource/Decision_tree_learning> . 
+uni:Instance-based_learning a uni:topic .
+uni:Instance-based_learning rdfs:label "Instance-based_learning" . 
+uni:Instance-based_learning uni:link <http://dbpedia.org/resource/Instance-based_learning> . 
+uni:Artificial_neural_network a uni:topic .
+uni:Artificial_neural_network rdfs:label "Artificial_neural_network" . 
+uni:Artificial_neural_network uni:link <http://dbpedia.org/resource/Artificial_neural_network> . 
+uni:Support_vector_machine a uni:topic .
+uni:Support_vector_machine rdfs:label "Support_vector_machine" . 
+uni:Support_vector_machine uni:link <http://dbpedia.org/resource/Support_vector_machine> . 
+uni:Computational_learning_theory a uni:topic .
+uni:Computational_learning_theory rdfs:label "Computational_learning_theory" . 
+uni:Computational_learning_theory uni:link <http://dbpedia.org/resource/Computational_learning_theory> . 
+uni:Deep_belief_network a uni:topic .
+uni:Deep_belief_network rdfs:label "Deep_belief_network" . 
+uni:Deep_belief_network uni:link <http://dbpedia.org/resource/Deep_belief_network> . 
+uni:Unsupervised_learning a uni:topic .
+uni:Unsupervised_learning rdfs:label "Unsupervised_learning" . 
+uni:Unsupervised_learning uni:link <http://dbpedia.org/resource/Unsupervised_learning> . 
+uni:K-means_clustering a uni:topic .
+uni:K-means_clustering rdfs:label "K-means_clustering" . 
+uni:K-means_clustering uni:link <http://dbpedia.org/resource/K-means_clustering> . 
+uni:Expectation_maximization_algorithm a uni:topic .
+uni:Expectation_maximization_algorithm rdfs:label "Expectation_maximization_algorithm" . 
+uni:Expectation_maximization_algorithm uni:link <http://dbpedia.org/resource/Expectation_maximization_algorithm> . 
+uni:Principal_component_analysis a uni:topic .
+uni:Principal_component_analysis rdfs:label "Principal_component_analysis" . 
+uni:Principal_component_analysis uni:link <http://dbpedia.org/resource/Principal_component_analysis> . 
+uni:Dimensionality_reduction a uni:topic .
+uni:Dimensionality_reduction rdfs:label "Dimensionality_reduction" . 
+uni:Dimensionality_reduction uni:link <http://dbpedia.org/resource/Dimensionality_reduction> . 
+uni:Dynamical_system a uni:topic .
+uni:Dynamical_system rdfs:label "Dynamical_system" . 
+uni:Dynamical_system uni:link <http://dbpedia.org/resource/Dynamical_system> . 
+uni:Hidden_Markov_model a uni:topic .
+uni:Hidden_Markov_model rdfs:label "Hidden_Markov_model" . 
+uni:Hidden_Markov_model uni:link <http://dbpedia.org/resource/Hidden_Markov_model> . 
+uni:Reinforcement_learning a uni:topic .
+uni:Reinforcement_learning rdfs:label "Reinforcement_learning" . 
+uni:Reinforcement_learning uni:link <http://dbpedia.org/resource/Reinforcement_learning> . 
+uni:Game_engine a uni:topic .
+uni:Game_engine rdfs:label "Game_engine" . 
+uni:Game_engine uni:link <http://dbpedia.org/resource/Game_engine> . 
+uni:Artificial_intelligence a uni:topic .
+uni:Artificial_intelligence rdfs:label "Artificial_intelligence" . 
+uni:Artificial_intelligence uni:link <http://dbpedia.org/resource/Artificial_intelligence> . 
+uni:Artificial_intelligence a uni:topic .
+uni:Artificial_intelligence rdfs:label "Artificial_intelligence" . 
+uni:Artificial_intelligence uni:link <http://dbpedia.org/resource/Artificial_intelligence> . 
+uni:Player_character a uni:topic .
+uni:Player_character rdfs:label "Player_character" . 
+uni:Player_character uni:link <http://dbpedia.org/resource/Player_character> . 
+uni:Pathfinding a uni:topic .
+uni:Pathfinding rdfs:label "Pathfinding" . 
+uni:Pathfinding uni:link <http://dbpedia.org/resource/Pathfinding> . 
+uni:Collision_detection a uni:topic .
+uni:Collision_detection rdfs:label "Collision_detection" . 
+uni:Collision_detection uni:link <http://dbpedia.org/resource/Collision_detection> . 
+uni:Mobile_game a uni:topic .
+uni:Mobile_game rdfs:label "Mobile_game" . 
+uni:Mobile_game uni:link <http://dbpedia.org/resource/Mobile_game> . 
+uni:Literary_realism a uni:topic .
+uni:Literary_realism rdfs:label "Literary_realism" . 
+uni:Literary_realism uni:link <http://dbpedia.org/resource/Literary_realism> . 
+uni:3D_computer_graphics a uni:topic .
+uni:3D_computer_graphics rdfs:label "3D_computer_graphics" . 
+uni:3D_computer_graphics uni:link <http://dbpedia.org/resource/3D_computer_graphics> . 
+uni:Computer_vision a uni:topic .
+uni:Computer_vision rdfs:label "Computer_vision" . 
+uni:Computer_vision uni:link <http://dbpedia.org/resource/Computer_vision> . 
+uni:OpenCV a uni:topic .
+uni:OpenCV rdfs:label "OpenCV" . 
+uni:OpenCV uni:link <http://dbpedia.org/resource/OpenCV> . 
+uni:Numerical_analysis a uni:topic .
+uni:Numerical_analysis rdfs:label "Numerical_analysis" . 
+uni:Numerical_analysis uni:link <http://dbpedia.org/resource/Numerical_analysis> . 
+uni:Computational_science a uni:topic .
+uni:Computational_science rdfs:label "Computational_science" . 
+uni:Computational_science uni:link <http://dbpedia.org/resource/Computational_science> . 
+uni:Nonlinear_system a uni:topic .
+uni:Nonlinear_system rdfs:label "Nonlinear_system" . 
+uni:Nonlinear_system uni:link <http://dbpedia.org/resource/Nonlinear_system> . 
+uni:Ordinary_differential_equation a uni:topic .
+uni:Ordinary_differential_equation rdfs:label "Ordinary_differential_equation" . 
+uni:Ordinary_differential_equation uni:link <http://dbpedia.org/resource/Ordinary_differential_equation> . 
+uni:Finite_difference_method a uni:topic .
+uni:Finite_difference_method rdfs:label "Finite_difference_method" . 
+uni:Finite_difference_method uni:link <http://dbpedia.org/resource/Finite_difference_method> . 
+uni:Numerical_stability a uni:topic .
+uni:Numerical_stability rdfs:label "Numerical_stability" . 
+uni:Numerical_stability uni:link <http://dbpedia.org/resource/Numerical_stability> . 
+uni:Collocation_method a uni:topic .
+uni:Collocation_method rdfs:label "Collocation_method" . 
+uni:Collocation_method uni:link <http://dbpedia.org/resource/Collocation_method> . 
+uni:Partial_differential_equation a uni:topic .
+uni:Partial_differential_equation rdfs:label "Partial_differential_equation" . 
+uni:Partial_differential_equation uni:link <http://dbpedia.org/resource/Partial_differential_equation> . 
+uni:Diffusion_equation a uni:topic .
+uni:Diffusion_equation rdfs:label "Diffusion_equation" . 
+uni:Diffusion_equation uni:link <http://dbpedia.org/resource/Diffusion_equation> . 
+uni:Nonlinear_system a uni:topic .
+uni:Nonlinear_system rdfs:label "Nonlinear_system" . 
+uni:Nonlinear_system uni:link <http://dbpedia.org/resource/Nonlinear_system> . 
+uni:Numerical_analysis a uni:topic .
+uni:Numerical_analysis rdfs:label "Numerical_analysis" . 
+uni:Numerical_analysis uni:link <http://dbpedia.org/resource/Numerical_analysis> . 
+uni:Computer_simulation a uni:topic .
+uni:Computer_simulation rdfs:label "Computer_simulation" . 
+uni:Computer_simulation uni:link <http://dbpedia.org/resource/Computer_simulation> . 
+uni:Homotopy a uni:topic .
+uni:Homotopy rdfs:label "Homotopy" . 
+uni:Homotopy uni:link <http://dbpedia.org/resource/Homotopy> . 
+uni:Lyapunov_stability a uni:topic .
+uni:Lyapunov_stability rdfs:label "Lyapunov_stability" . 
+uni:Lyapunov_stability uni:link <http://dbpedia.org/resource/Lyapunov_stability> . 
+uni:Wave a uni:topic .
+uni:Wave rdfs:label "Wave" . 
+uni:Wave uni:link <http://dbpedia.org/resource/Wave> . 
+uni:Discretization a uni:topic .
+uni:Discretization rdfs:label "Discretization" . 
+uni:Discretization uni:link <http://dbpedia.org/resource/Discretization> . 
+uni:Digital_geometry a uni:topic .
+uni:Digital_geometry rdfs:label "Digital_geometry" . 
+uni:Digital_geometry uni:link <http://dbpedia.org/resource/Digital_geometry> . 
+uni:Graphics_pipeline a uni:topic .
+uni:Graphics_pipeline rdfs:label "Graphics_pipeline" . 
+uni:Graphics_pipeline uni:link <http://dbpedia.org/resource/Graphics_pipeline> . 
+uni:Digital_electronics a uni:topic .
+uni:Digital_electronics rdfs:label "Digital_electronics" . 
+uni:Digital_electronics uni:link <http://dbpedia.org/resource/Digital_electronics> . 
+uni:3D_modeling a uni:topic .
+uni:3D_modeling rdfs:label "3D_modeling" . 
+uni:3D_modeling uni:link <http://dbpedia.org/resource/3D_modeling> . 
+uni:Geometry a uni:topic .
+uni:Geometry rdfs:label "Geometry" . 
+uni:Geometry uni:link <http://dbpedia.org/resource/Geometry> . 
+uni:Fender_Wide_Range a uni:topic .
+uni:Fender_Wide_Range rdfs:label "Fender_Wide_Range" . 
+uni:Fender_Wide_Range uni:link <http://dbpedia.org/resource/Fender_Wide_Range> . 
+uni:Computer-aided_design a uni:topic .
+uni:Computer-aided_design rdfs:label "Computer-aided_design" . 
+uni:Computer-aided_design uni:link <http://dbpedia.org/resource/Computer-aided_design> . 
+uni:Reverse_engineering a uni:topic .
+uni:Reverse_engineering rdfs:label "Reverse_engineering" . 
+uni:Reverse_engineering uni:link <http://dbpedia.org/resource/Reverse_engineering> . 
+uni:Computer_graphics a uni:topic .
+uni:Computer_graphics rdfs:label "Computer_graphics" . 
+uni:Computer_graphics uni:link <http://dbpedia.org/resource/Computer_graphics> . 
+uni:Triangle_mesh a uni:topic .
+uni:Triangle_mesh rdfs:label "Triangle_mesh" . 
+uni:Triangle_mesh uni:link <http://dbpedia.org/resource/Triangle_mesh> . 
+uni:Flat_spline a uni:topic .
+uni:Flat_spline rdfs:label "Flat_spline" . 
+uni:Flat_spline uni:link <http://dbpedia.org/resource/Flat_spline> . 
+uni:Lexical_analysis a uni:topic .
+uni:Lexical_analysis rdfs:label "Lexical_analysis" . 
+uni:Lexical_analysis uni:link <http://dbpedia.org/resource/Lexical_analysis> . 
+uni:Parsing a uni:topic .
+uni:Parsing rdfs:label "Parsing" . 
+uni:Parsing uni:link <http://dbpedia.org/resource/Parsing> . 
+uni:Syntax-directed_translation a uni:topic .
+uni:Syntax-directed_translation rdfs:label "Syntax-directed_translation" . 
+uni:Syntax-directed_translation uni:link <http://dbpedia.org/resource/Syntax-directed_translation> . 
+uni:Program_optimization a uni:topic .
+uni:Program_optimization rdfs:label "Program_optimization" . 
+uni:Program_optimization uni:link <http://dbpedia.org/resource/Program_optimization> . 
+uni:Error_detection_and_correction a uni:topic .
+uni:Error_detection_and_correction rdfs:label "Error_detection_and_correction" . 
+uni:Error_detection_and_correction uni:link <http://dbpedia.org/resource/Error_detection_and_correction> . 
+uni:Control_flow a uni:topic .
+uni:Control_flow rdfs:label "Control_flow" . 
+uni:Control_flow uni:link <http://dbpedia.org/resource/Control_flow> . 
+uni:Packet_switching a uni:topic .
+uni:Packet_switching rdfs:label "Packet_switching" . 
+uni:Packet_switching uni:link <http://dbpedia.org/resource/Packet_switching> . 
+uni:Internet_Protocol a uni:topic .
+uni:Internet_Protocol rdfs:label "Internet_Protocol" . 
+uni:Internet_Protocol uni:link <http://dbpedia.org/resource/Internet_Protocol> . 
+uni:IPv6 a uni:topic .
+uni:IPv6 rdfs:label "IPv6" . 
+uni:IPv6 uni:link <http://dbpedia.org/resource/IPv6> . 
+uni:Multicast a uni:topic .
+uni:Multicast rdfs:label "Multicast" . 
+uni:Multicast uni:link <http://dbpedia.org/resource/Multicast> . 
+uni:User_Datagram_Protocol a uni:topic .
+uni:User_Datagram_Protocol rdfs:label "User_Datagram_Protocol" . 
+uni:User_Datagram_Protocol uni:link <http://dbpedia.org/resource/User_Datagram_Protocol> . 
+uni:Transmission_Control_Protocol a uni:topic .
+uni:Transmission_Control_Protocol rdfs:label "Transmission_Control_Protocol" . 
+uni:Transmission_Control_Protocol uni:link <http://dbpedia.org/resource/Transmission_Control_Protocol> . 
+uni:Network_security a uni:topic .
+uni:Network_security rdfs:label "Network_security" . 
+uni:Network_security uni:link <http://dbpedia.org/resource/Network_security> . 
+uni:Query_optimization a uni:topic .
+uni:Query_optimization rdfs:label "Query_optimization" . 
+uni:Query_optimization uni:link <http://dbpedia.org/resource/Query_optimization> . 
+uni:Query_optimization a uni:topic .
+uni:Query_optimization rdfs:label "Query_optimization" . 
+uni:Query_optimization uni:link <http://dbpedia.org/resource/Query_optimization> . 
+uni:Information_integration a uni:topic .
+uni:Information_integration rdfs:label "Information_integration" . 
+uni:Information_integration uni:link <http://dbpedia.org/resource/Information_integration> . 
+uni:Data_warehouse a uni:topic .
+uni:Data_warehouse rdfs:label "Data_warehouse" . 
+uni:Data_warehouse uni:link <http://dbpedia.org/resource/Data_warehouse> . 
+uni:Data_mining a uni:topic .
+uni:Data_mining rdfs:label "Data_mining" . 
+uni:Data_mining uni:link <http://dbpedia.org/resource/Data_mining> . 
+uni:Online_analytical_processing a uni:topic .
+uni:Online_analytical_processing rdfs:label "Online_analytical_processing" . 
+uni:Online_analytical_processing uni:link <http://dbpedia.org/resource/Online_analytical_processing> . 
+uni:XML a uni:topic .
+uni:XML rdfs:label "XML" . 
+uni:XML uni:link <http://dbpedia.org/resource/XML> . 
+uni:Multimedia a uni:topic .
+uni:Multimedia rdfs:label "Multimedia" . 
+uni:Multimedia uni:link <http://dbpedia.org/resource/Multimedia> . 
+uni:Data_management a uni:topic .
+uni:Data_management rdfs:label "Data_management" . 
+uni:Data_management uni:link <http://dbpedia.org/resource/Data_management> . 
+uni:World_Wide_Web_Consortium a uni:topic .
+uni:World_Wide_Web_Consortium rdfs:label "World_Wide_Web_Consortium" . 
+uni:World_Wide_Web_Consortium uni:link <http://dbpedia.org/resource/World_Wide_Web_Consortium> . 
+uni:XML a uni:topic .
+uni:XML rdfs:label "XML" . 
+uni:XML uni:link <http://dbpedia.org/resource/XML> . 
+uni:Resource_Description_Framework a uni:topic .
+uni:Resource_Description_Framework rdfs:label "Resource_Description_Framework" . 
+uni:Resource_Description_Framework uni:link <http://dbpedia.org/resource/Resource_Description_Framework> . 
+uni:XML_schema a uni:topic .
+uni:XML_schema rdfs:label "XML_schema" . 
+uni:XML_schema uni:link <http://dbpedia.org/resource/XML_schema> . 
+uni:Semantic_Web a uni:topic .
+uni:Semantic_Web rdfs:label "Semantic_Web" . 
+uni:Semantic_Web uni:link <http://dbpedia.org/resource/Semantic_Web> . 
+uni:Ontology_engineering a uni:topic .
+uni:Ontology_engineering rdfs:label "Ontology_engineering" . 
+uni:Ontology_engineering uni:link <http://dbpedia.org/resource/Ontology_engineering> . 
+uni:Ontology a uni:topic .
+uni:Ontology rdfs:label "Ontology" . 
+uni:Ontology uni:link <http://dbpedia.org/resource/Ontology> . 
+uni:Web_Ontology_Language a uni:topic .
+uni:Web_Ontology_Language rdfs:label "Web_Ontology_Language" . 
+uni:Web_Ontology_Language uni:link <http://dbpedia.org/resource/Web_Ontology_Language> . 
+uni:First-order_logic a uni:topic .
+uni:First-order_logic rdfs:label "First-order_logic" . 
+uni:First-order_logic uni:link <http://dbpedia.org/resource/First-order_logic> . 
+uni:Relational_algebra a uni:topic .
+uni:Relational_algebra rdfs:label "Relational_algebra" . 
+uni:Relational_algebra uni:link <http://dbpedia.org/resource/Relational_algebra> . 
+uni:Relational_calculus a uni:topic .
+uni:Relational_calculus rdfs:label "Relational_calculus" . 
+uni:Relational_calculus uni:link <http://dbpedia.org/resource/Relational_calculus> . 
+uni:Logic_programming a uni:topic .
+uni:Logic_programming rdfs:label "Logic_programming" . 
+uni:Logic_programming uni:link <http://dbpedia.org/resource/Logic_programming> . 
+uni:Knowledge_representation_and_reasoning a uni:topic .
+uni:Knowledge_representation_and_reasoning rdfs:label "Knowledge_representation_and_reasoning" . 
+uni:Knowledge_representation_and_reasoning uni:link <http://dbpedia.org/resource/Knowledge_representation_and_reasoning> . 
+uni:Computer_science a uni:topic .
+uni:Computer_science rdfs:label "Computer_science" . 
+uni:Computer_science uni:link <http://dbpedia.org/resource/Computer_science> . 
+uni:Theorem a uni:topic .
+uni:Theorem rdfs:label "Theorem" . 
+uni:Theorem uni:link <http://dbpedia.org/resource/Theorem> . 
+uni:Ramsey_Abbey a uni:topic .
+uni:Ramsey_Abbey rdfs:label "Ramsey_Abbey" . 
+uni:Ramsey_Abbey uni:link <http://dbpedia.org/resource/Ramsey_Abbey> . 
+uni:Van a uni:topic .
+uni:Van rdfs:label "Van" . 
+uni:Van uni:link <http://dbpedia.org/resource/Van> . 
+uni:Conjecture a uni:topic .
+uni:Conjecture rdfs:label "Conjecture" . 
+uni:Conjecture uni:link <http://dbpedia.org/resource/Conjecture> . 
+uni:Extremal_graph_theory a uni:topic .
+uni:Extremal_graph_theory rdfs:label "Extremal_graph_theory" . 
+uni:Extremal_graph_theory uni:link <http://dbpedia.org/resource/Extremal_graph_theory> . 
+uni:Random_graph a uni:topic .
+uni:Random_graph rdfs:label "Random_graph" . 
+uni:Random_graph uni:link <http://dbpedia.org/resource/Random_graph> . 
+uni:Graph_coloring a uni:topic .
+uni:Graph_coloring rdfs:label "Graph_coloring" . 
+uni:Graph_coloring uni:link <http://dbpedia.org/resource/Graph_coloring> . 
+uni:Probabilistic_method a uni:topic .
+uni:Probabilistic_method rdfs:label "Probabilistic_method" . 
+uni:Probabilistic_method uni:link <http://dbpedia.org/resource/Probabilistic_method> . 
+uni:Mathematical_model a uni:topic .
+uni:Mathematical_model rdfs:label "Mathematical_model" . 
+uni:Mathematical_model uni:link <http://dbpedia.org/resource/Mathematical_model> . 
+uni:Mathematical_optimization a uni:topic .
+uni:Mathematical_optimization rdfs:label "Mathematical_optimization" . 
+uni:Mathematical_optimization uni:link <http://dbpedia.org/resource/Mathematical_optimization> . 
+uni:Lagrangian_relaxation a uni:topic .
+uni:Lagrangian_relaxation rdfs:label "Lagrangian_relaxation" . 
+uni:Lagrangian_relaxation uni:link <http://dbpedia.org/resource/Lagrangian_relaxation> . 
+uni:Nonlinear_programming a uni:topic .
+uni:Nonlinear_programming rdfs:label "Nonlinear_programming" . 
+uni:Nonlinear_programming uni:link <http://dbpedia.org/resource/Nonlinear_programming> . 
+uni:Integer a uni:topic .
+uni:Integer rdfs:label "Integer" . 
+uni:Integer uni:link <http://dbpedia.org/resource/Integer> . 
+uni:Nonlinear_system a uni:topic .
+uni:Nonlinear_system rdfs:label "Nonlinear_system" . 
+uni:Nonlinear_system uni:link <http://dbpedia.org/resource/Nonlinear_system> . 
+uni:Continuous_optimization a uni:topic .
+uni:Continuous_optimization rdfs:label "Continuous_optimization" . 
+uni:Continuous_optimization uni:link <http://dbpedia.org/resource/Continuous_optimization> . 
+uni:Branch_and_bound a uni:topic .
+uni:Branch_and_bound rdfs:label "Branch_and_bound" . 
+uni:Branch_and_bound uni:link <http://dbpedia.org/resource/Branch_and_bound> . 
+uni:Direct_current a uni:topic .
+uni:Direct_current rdfs:label "Direct_current" . 
+uni:Direct_current uni:link <http://dbpedia.org/resource/Direct_current> . 
+uni:Convex_optimization a uni:topic .
+uni:Convex_optimization rdfs:label "Convex_optimization" . 
+uni:Convex_optimization uni:link <http://dbpedia.org/resource/Convex_optimization> . 
+uni:Bilinear_form a uni:topic .
+uni:Bilinear_form rdfs:label "Bilinear_form" . 
+uni:Bilinear_form uni:link <http://dbpedia.org/resource/Bilinear_form> . 
+uni:Biconvex_optimization a uni:topic .
+uni:Biconvex_optimization rdfs:label "Biconvex_optimization" . 
+uni:Biconvex_optimization uni:link <http://dbpedia.org/resource/Biconvex_optimization> . 
+uni:Heuristic a uni:topic .
+uni:Heuristic rdfs:label "Heuristic" . 
+uni:Heuristic uni:link <http://dbpedia.org/resource/Heuristic> . 
+uni:History_of_economic_thought a uni:topic .
+uni:History_of_economic_thought rdfs:label "History_of_economic_thought" . 
+uni:History_of_economic_thought uni:link <http://dbpedia.org/resource/History_of_economic_thought> . 
+uni:Turing_machine a uni:topic .
+uni:Turing_machine rdfs:label "Turing_machine" . 
+uni:Turing_machine uni:link <http://dbpedia.org/resource/Turing_machine> . 
+uni:Computable_function a uni:topic .
+uni:Computable_function rdfs:label "Computable_function" . 
+uni:Computable_function uni:link <http://dbpedia.org/resource/Computable_function> . 
+uni:Computable_function a uni:topic .
+uni:Computable_function rdfs:label "Computable_function" . 
+uni:Computable_function uni:link <http://dbpedia.org/resource/Computable_function> . 
+uni:Theorem a uni:topic .
+uni:Theorem rdfs:label "Theorem" . 
+uni:Theorem uni:link <http://dbpedia.org/resource/Theorem> . 
+uni:Time a uni:topic .
+uni:Time rdfs:label "Time" . 
+uni:Time uni:link <http://dbpedia.org/resource/Time> . 
+uni:Computational_complexity_theory a uni:topic .
+uni:Computational_complexity_theory rdfs:label "Computational_complexity_theory" . 
+uni:Computational_complexity_theory uni:link <http://dbpedia.org/resource/Computational_complexity_theory> . 
+uni:Computational_complexity_theory a uni:topic .
+uni:Computational_complexity_theory rdfs:label "Computational_complexity_theory" . 
+uni:Computational_complexity_theory uni:link <http://dbpedia.org/resource/Computational_complexity_theory> . 
+uni:Algorithm a uni:topic .
+uni:Algorithm rdfs:label "Algorithm" . 
+uni:Algorithm uni:link <http://dbpedia.org/resource/Algorithm> . 
+uni:Combinatorial_optimization a uni:topic .
+uni:Combinatorial_optimization rdfs:label "Combinatorial_optimization" . 
+uni:Combinatorial_optimization uni:link <http://dbpedia.org/resource/Combinatorial_optimization> . 
+uni:Dynamic_programming a uni:topic .
+uni:Dynamic_programming rdfs:label "Dynamic_programming" . 
+uni:Dynamic_programming uni:link <http://dbpedia.org/resource/Dynamic_programming> . 
+uni:Branch_and_bound a uni:topic .
+uni:Branch_and_bound rdfs:label "Branch_and_bound" . 
+uni:Branch_and_bound uni:link <http://dbpedia.org/resource/Branch_and_bound> . 
+uni:Graph_theory a uni:topic .
+uni:Graph_theory rdfs:label "Graph_theory" . 
+uni:Graph_theory uni:link <http://dbpedia.org/resource/Graph_theory> . 
+uni:Analysis_of_algorithms a uni:topic .
+uni:Analysis_of_algorithms rdfs:label "Analysis_of_algorithms" . 
+uni:Analysis_of_algorithms uni:link <http://dbpedia.org/resource/Analysis_of_algorithms> . 
+uni:String_searching_algorithm a uni:topic .
+uni:String_searching_algorithm rdfs:label "String_searching_algorithm" . 
+uni:String_searching_algorithm uni:link <http://dbpedia.org/resource/String_searching_algorithm> . 
+uni:NP-completeness a uni:topic .
+uni:NP-completeness rdfs:label "NP-completeness" . 
+uni:NP-completeness uni:link <http://dbpedia.org/resource/NP-completeness> . 
+uni:Combinatorics a uni:topic .
+uni:Combinatorics rdfs:label "Combinatorics" . 
+uni:Combinatorics uni:link <http://dbpedia.org/resource/Combinatorics> . 
+uni:Combinatorics a uni:topic .
+uni:Combinatorics rdfs:label "Combinatorics" . 
+uni:Combinatorics uni:link <http://dbpedia.org/resource/Combinatorics> . 
+uni:Graph_theory a uni:topic .
+uni:Graph_theory rdfs:label "Graph_theory" . 
+uni:Graph_theory uni:link <http://dbpedia.org/resource/Graph_theory> . 
+uni:Convex_set a uni:topic .
+uni:Convex_set rdfs:label "Convex_set" . 
+uni:Convex_set uni:link <http://dbpedia.org/resource/Convex_set> . 
+uni:Polygon_triangulation a uni:topic .
+uni:Polygon_triangulation rdfs:label "Polygon_triangulation" . 
+uni:Polygon_triangulation uni:link <http://dbpedia.org/resource/Polygon_triangulation> . 
+uni:Point_location a uni:topic .
+uni:Point_location rdfs:label "Point_location" . 
+uni:Point_location uni:link <http://dbpedia.org/resource/Point_location> . 
+uni:Range_searching a uni:topic .
+uni:Range_searching rdfs:label "Range_searching" . 
+uni:Range_searching uni:link <http://dbpedia.org/resource/Range_searching> . 
+uni:Voronoi_diagram a uni:topic .
+uni:Voronoi_diagram rdfs:label "Voronoi_diagram" . 
+uni:Voronoi_diagram uni:link <http://dbpedia.org/resource/Voronoi_diagram> . 
+uni:Robert_Delaunay a uni:topic .
+uni:Robert_Delaunay rdfs:label "Robert_Delaunay" . 
+uni:Robert_Delaunay uni:link <http://dbpedia.org/resource/Robert_Delaunay> . 
+uni:Polygon_triangulation a uni:topic .
+uni:Polygon_triangulation rdfs:label "Polygon_triangulation" . 
+uni:Polygon_triangulation uni:link <http://dbpedia.org/resource/Polygon_triangulation> . 
+uni:Robotics a uni:topic .
+uni:Robotics rdfs:label "Robotics" . 
+uni:Robotics uni:link <http://dbpedia.org/resource/Robotics> . 
+uni:Motion_planning a uni:topic .
+uni:Motion_planning rdfs:label "Motion_planning" . 
+uni:Motion_planning uni:link <http://dbpedia.org/resource/Motion_planning> . 
+uni:Binary_number a uni:topic .
+uni:Binary_number rdfs:label "Binary_number" . 
+uni:Binary_number uni:link <http://dbpedia.org/resource/Binary_number> . 
+uni:Sweep_line_algorithm a uni:topic .
+uni:Sweep_line_algorithm rdfs:label "Sweep_line_algorithm" . 
+uni:Sweep_line_algorithm uni:link <http://dbpedia.org/resource/Sweep_line_algorithm> . 
+uni:Computer_graphics a uni:topic .
+uni:Computer_graphics rdfs:label "Computer_graphics" . 
+uni:Computer_graphics uni:link <http://dbpedia.org/resource/Computer_graphics> . 
+uni:Computer-aided_design a uni:topic .
+uni:Computer-aided_design rdfs:label "Computer-aided_design" . 
+uni:Computer-aided_design uni:link <http://dbpedia.org/resource/Computer-aided_design> . 
+uni:Mesh_generation a uni:topic .
+uni:Mesh_generation rdfs:label "Mesh_generation" . 
+uni:Mesh_generation uni:link <http://dbpedia.org/resource/Mesh_generation> . 
+uni:Heuristic a uni:topic .
+uni:Heuristic rdfs:label "Heuristic" . 
+uni:Heuristic uni:link <http://dbpedia.org/resource/Heuristic> . 
+uni:Automated_reasoning a uni:topic .
+uni:Automated_reasoning rdfs:label "Automated_reasoning" . 
+uni:Automated_reasoning uni:link <http://dbpedia.org/resource/Automated_reasoning> . 
+uni:Knowledge_representation_and_reasoning a uni:topic .
+uni:Knowledge_representation_and_reasoning rdfs:label "Knowledge_representation_and_reasoning" . 
+uni:Knowledge_representation_and_reasoning uni:link <http://dbpedia.org/resource/Knowledge_representation_and_reasoning> . 
+uni:Artificial_intelligence a uni:topic .
+uni:Artificial_intelligence rdfs:label "Artificial_intelligence" . 
+uni:Artificial_intelligence uni:link <http://dbpedia.org/resource/Artificial_intelligence> . 
+uni:Recurrent_neural_network a uni:topic .
+uni:Recurrent_neural_network rdfs:label "Recurrent_neural_network" . 
+uni:Recurrent_neural_network uni:link <http://dbpedia.org/resource/Recurrent_neural_network> . 
+uni:Feature_extraction a uni:topic .
+uni:Feature_extraction rdfs:label "Feature_extraction" . 
+uni:Feature_extraction uni:link <http://dbpedia.org/resource/Feature_extraction> . 
+uni:Bayes_estimator a uni:topic .
+uni:Bayes_estimator rdfs:label "Bayes_estimator" . 
+uni:Bayes_estimator uni:link <http://dbpedia.org/resource/Bayes_estimator> . 
+uni:Discriminant a uni:topic .
+uni:Discriminant rdfs:label "Discriminant" . 
+uni:Discriminant uni:link <http://dbpedia.org/resource/Discriminant> . 
+uni:Knowledge_representation_and_reasoning a uni:topic .
+uni:Knowledge_representation_and_reasoning rdfs:label "Knowledge_representation_and_reasoning" . 
+uni:Knowledge_representation_and_reasoning uni:link <http://dbpedia.org/resource/Knowledge_representation_and_reasoning> . 
+uni:Conflict_resolution a uni:topic .
+uni:Conflict_resolution rdfs:label "Conflict_resolution" . 
+uni:Conflict_resolution uni:link <http://dbpedia.org/resource/Conflict_resolution> . 
+uni:Blackboard a uni:topic .
+uni:Blackboard rdfs:label "Blackboard" . 
+uni:Blackboard uni:link <http://dbpedia.org/resource/Blackboard> . 
+uni:Natural-language_processing a uni:topic .
+uni:Natural-language_processing rdfs:label "Natural-language_processing" . 
+uni:Natural-language_processing uni:link <http://dbpedia.org/resource/Natural-language_processing> . 
+uni:English_language a uni:topic .
+uni:English_language rdfs:label "English_language" . 
+uni:English_language uni:link <http://dbpedia.org/resource/English_language> . 
+uni:Parsing a uni:topic .
+uni:Parsing rdfs:label "Parsing" . 
+uni:Parsing uni:link <http://dbpedia.org/resource/Parsing> . 
+uni:Principle_of_compositionality a uni:topic .
+uni:Principle_of_compositionality rdfs:label "Principle_of_compositionality" . 
+uni:Principle_of_compositionality uni:link <http://dbpedia.org/resource/Principle_of_compositionality> . 
+uni:Text_mining a uni:topic .
+uni:Text_mining rdfs:label "Text_mining" . 
+uni:Text_mining uni:link <http://dbpedia.org/resource/Text_mining> . 
+uni:Software_engineering a uni:topic .
+uni:Software_engineering rdfs:label "Software_engineering" . 
+uni:Software_engineering uni:link <http://dbpedia.org/resource/Software_engineering> . 
+uni:3D_computer_graphics a uni:topic .
+uni:3D_computer_graphics rdfs:label "3D_computer_graphics" . 
+uni:3D_computer_graphics uni:link <http://dbpedia.org/resource/3D_computer_graphics> . 
+uni:Applications_architecture a uni:topic .
+uni:Applications_architecture rdfs:label "Applications_architecture" . 
+uni:Applications_architecture uni:link <http://dbpedia.org/resource/Applications_architecture> . 
+uni:3D_modeling a uni:topic .
+uni:3D_modeling rdfs:label "3D_modeling" . 
+uni:3D_modeling uni:link <http://dbpedia.org/resource/3D_modeling> . 
+uni:Graphics_pipeline a uni:topic .
+uni:Graphics_pipeline rdfs:label "Graphics_pipeline" . 
+uni:Graphics_pipeline uni:link <http://dbpedia.org/resource/Graphics_pipeline> . 
+uni:Hidden_surface_determination a uni:topic .
+uni:Hidden_surface_determination rdfs:label "Hidden_surface_determination" . 
+uni:Hidden_surface_determination uni:link <http://dbpedia.org/resource/Hidden_surface_determination> . 
+uni:Collision_detection a uni:topic .
+uni:Collision_detection rdfs:label "Collision_detection" . 
+uni:Collision_detection uni:link <http://dbpedia.org/resource/Collision_detection> . 
+uni:Photorealism a uni:topic .
+uni:Photorealism rdfs:label "Photorealism" . 
+uni:Photorealism uni:link <http://dbpedia.org/resource/Photorealism> . 
+uni:Game_physics a uni:topic .
+uni:Game_physics rdfs:label "Game_physics" . 
+uni:Game_physics uni:link <http://dbpedia.org/resource/Game_physics> . 
+uni:Digital_image_processing a uni:topic .
+uni:Digital_image_processing rdfs:label "Digital_image_processing" . 
+uni:Digital_image_processing uni:link <http://dbpedia.org/resource/Digital_image_processing> . 
+uni:Histogram a uni:topic .
+uni:Histogram rdfs:label "Histogram" . 
+uni:Histogram uni:link <http://dbpedia.org/resource/Histogram> . 
+uni:Frequency_domain a uni:topic .
+uni:Frequency_domain rdfs:label "Frequency_domain" . 
+uni:Frequency_domain uni:link <http://dbpedia.org/resource/Frequency_domain> . 
+uni:Image_segmentation a uni:topic .
+uni:Image_segmentation rdfs:label "Image_segmentation" . 
+uni:Image_segmentation uni:link <http://dbpedia.org/resource/Image_segmentation> . 
+uni:Hough_transform a uni:topic .
+uni:Hough_transform rdfs:label "Hough_transform" . 
+uni:Hough_transform uni:link <http://dbpedia.org/resource/Hough_transform> . 
+uni:Edge_detection a uni:topic .
+uni:Edge_detection rdfs:label "Edge_detection" . 
+uni:Edge_detection uni:link <http://dbpedia.org/resource/Edge_detection> . 
+uni:Thresholding_image_processing a uni:topic .
+uni:Thresholding_image_processing rdfs:label "Thresholding_image_processing" . 
+uni:Thresholding_image_processing uni:link <http://dbpedia.org/resource/Thresholding_image_processing> . 
+uni:Image_compression a uni:topic .
+uni:Image_compression rdfs:label "Image_compression" . 
+uni:Image_compression uni:link <http://dbpedia.org/resource/Image_compression> . 
+uni:Wavelet_transform a uni:topic .
+uni:Wavelet_transform rdfs:label "Wavelet_transform" . 
+uni:Wavelet_transform uni:link <http://dbpedia.org/resource/Wavelet_transform> . 
+uni:Natural-language_processing a uni:topic .
+uni:Natural-language_processing rdfs:label "Natural-language_processing" . 
+uni:Natural-language_processing uni:link <http://dbpedia.org/resource/Natural-language_processing> . 
+uni:Statistical_machine_translation a uni:topic .
+uni:Statistical_machine_translation rdfs:label "Statistical_machine_translation" . 
+uni:Statistical_machine_translation uni:link <http://dbpedia.org/resource/Statistical_machine_translation> . 
+uni:N-gram a uni:topic .
+uni:N-gram rdfs:label "N-gram" . 
+uni:N-gram uni:link <http://dbpedia.org/resource/N-gram> . 
+uni:Word-sense_disambiguation a uni:topic .
+uni:Word-sense_disambiguation rdfs:label "Word-sense_disambiguation" . 
+uni:Word-sense_disambiguation uni:link <http://dbpedia.org/resource/Word-sense_disambiguation> . 
+uni:Part-of-speech_tagging a uni:topic .
+uni:Part-of-speech_tagging rdfs:label "Part-of-speech_tagging" . 
+uni:Part-of-speech_tagging uni:link <http://dbpedia.org/resource/Part-of-speech_tagging> . 
+uni:Parsing a uni:topic .
+uni:Parsing rdfs:label "Parsing" . 
+uni:Parsing uni:link <http://dbpedia.org/resource/Parsing> . 
+uni:Boolean_algebra a uni:topic .
+uni:Boolean_algebra rdfs:label "Boolean_algebra" . 
+uni:Boolean_algebra uni:link <http://dbpedia.org/resource/Boolean_algebra> . 
+uni:Vector_space a uni:topic .
+uni:Vector_space rdfs:label "Vector_space" . 
+uni:Vector_space uni:link <http://dbpedia.org/resource/Vector_space> . 
+uni:Lexical_analysis a uni:topic .
+uni:Lexical_analysis rdfs:label "Lexical_analysis" . 
+uni:Lexical_analysis uni:link <http://dbpedia.org/resource/Lexical_analysis> . 
+uni:Weighting a uni:topic .
+uni:Weighting rdfs:label "Weighting" . 
+uni:Weighting uni:link <http://dbpedia.org/resource/Weighting> . 
+uni:Relevance_feedback a uni:topic .
+uni:Relevance_feedback rdfs:label "Relevance_feedback" . 
+uni:Relevance_feedback uni:link <http://dbpedia.org/resource/Relevance_feedback> . 
+uni:Query_expansion a uni:topic .
+uni:Query_expansion rdfs:label "Query_expansion" . 
+uni:Query_expansion uni:link <http://dbpedia.org/resource/Query_expansion> . 
+uni:XML a uni:topic .
+uni:XML rdfs:label "XML" . 
+uni:XML uni:link <http://dbpedia.org/resource/XML> . 
+uni:Link_analysis a uni:topic .
+uni:Link_analysis rdfs:label "Link_analysis" . 
+uni:Link_analysis uni:link <http://dbpedia.org/resource/Link_analysis> . 
+uni:PageRank a uni:topic .
+uni:PageRank rdfs:label "PageRank" . 
+uni:PageRank uni:link <http://dbpedia.org/resource/PageRank> . 
+uni:Algorithm a uni:topic .
+uni:Algorithm rdfs:label "Algorithm" . 
+uni:Algorithm uni:link <http://dbpedia.org/resource/Algorithm> . 
+uni:Anti-spam_techniques a uni:topic .
+uni:Anti-spam_techniques rdfs:label "Anti-spam_techniques" . 
+uni:Anti-spam_techniques uni:link <http://dbpedia.org/resource/Anti-spam_techniques> . 
+uni:Bioinformatics a uni:topic .
+uni:Bioinformatics rdfs:label "Bioinformatics" . 
+uni:Bioinformatics uni:link <http://dbpedia.org/resource/Bioinformatics> . 
+uni:Multiple_sequence_alignment a uni:topic .
+uni:Multiple_sequence_alignment rdfs:label "Multiple_sequence_alignment" . 
+uni:Multiple_sequence_alignment uni:link <http://dbpedia.org/resource/Multiple_sequence_alignment> . 
+uni:Multiple_sequence_alignment a uni:topic .
+uni:Multiple_sequence_alignment rdfs:label "Multiple_sequence_alignment" . 
+uni:Multiple_sequence_alignment uni:link <http://dbpedia.org/resource/Multiple_sequence_alignment> . 
+uni:Phylogenetic_tree a uni:topic .
+uni:Phylogenetic_tree rdfs:label "Phylogenetic_tree" . 
+uni:Phylogenetic_tree uni:link <http://dbpedia.org/resource/Phylogenetic_tree> . 
+uni:Protein_structure_prediction a uni:topic .
+uni:Protein_structure_prediction rdfs:label "Protein_structure_prediction" . 
+uni:Protein_structure_prediction uni:link <http://dbpedia.org/resource/Protein_structure_prediction> . 
+uni:Three-dimensional_space a uni:topic .
+uni:Three-dimensional_space rdfs:label "Three-dimensional_space" . 
+uni:Three-dimensional_space uni:link <http://dbpedia.org/resource/Three-dimensional_space> . 
+uni:Gene a uni:topic .
+uni:Gene rdfs:label "Gene" . 
+uni:Gene uni:link <http://dbpedia.org/resource/Gene> . 
+uni:Gene_expression a uni:topic .
+uni:Gene_expression rdfs:label "Gene_expression" . 
+uni:Gene_expression uni:link <http://dbpedia.org/resource/Gene_expression> . 
+uni:Dynamic_programming a uni:topic .
+uni:Dynamic_programming rdfs:label "Dynamic_programming" . 
+uni:Dynamic_programming uni:link <http://dbpedia.org/resource/Dynamic_programming> . 
+uni:Machine_learning a uni:topic .
+uni:Machine_learning rdfs:label "Machine_learning" . 
+uni:Machine_learning uni:link <http://dbpedia.org/resource/Machine_learning> . 
+uni:Simulated_annealing a uni:topic .
+uni:Simulated_annealing rdfs:label "Simulated_annealing" . 
+uni:Simulated_annealing uni:link <http://dbpedia.org/resource/Simulated_annealing> . 
+uni:Bioinformatics a uni:topic .
+uni:Bioinformatics rdfs:label "Bioinformatics" . 
+uni:Bioinformatics uni:link <http://dbpedia.org/resource/Bioinformatics> . 
+uni:Data_management a uni:topic .
+uni:Data_management rdfs:label "Data_management" . 
+uni:Data_management uni:link <http://dbpedia.org/resource/Data_management> . 
+uni:Knowledge_management a uni:topic .
+uni:Knowledge_management rdfs:label "Knowledge_management" . 
+uni:Knowledge_management uni:link <http://dbpedia.org/resource/Knowledge_management> . 
+uni:Database a uni:topic .
+uni:Database rdfs:label "Database" . 
+uni:Database uni:link <http://dbpedia.org/resource/Database> . 
+uni:College_of_Osteopathic_Medicine_of_the_Pacific a uni:topic .
+uni:College_of_Osteopathic_Medicine_of_the_Pacific rdfs:label "College_of_Osteopathic_Medicine_of_the_Pacific" . 
+uni:College_of_Osteopathic_Medicine_of_the_Pacific uni:link <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> . 
+uni:Failure a uni:topic .
+uni:Failure rdfs:label "Failure" . 
+uni:Failure uni:link <http://dbpedia.org/resource/Failure> . 
+uni:Computer_science a uni:topic .
+uni:Computer_science rdfs:label "Computer_science" . 
+uni:Computer_science uni:link <http://dbpedia.org/resource/Computer_science> . 
+uni:Computer_memory a uni:topic .
+uni:Computer_memory rdfs:label "Computer_memory" . 
+uni:Computer_memory uni:link <http://dbpedia.org/resource/Computer_memory> . 
+uni:Analysis_of_algorithms a uni:topic .
+uni:Analysis_of_algorithms rdfs:label "Analysis_of_algorithms" . 
+uni:Analysis_of_algorithms uni:link <http://dbpedia.org/resource/Analysis_of_algorithms> . 
+uni:Mobile_computing a uni:topic .
+uni:Mobile_computing rdfs:label "Mobile_computing" . 
+uni:Mobile_computing uni:link <http://dbpedia.org/resource/Mobile_computing> . 
+uni:Wireless_LAN a uni:topic .
+uni:Wireless_LAN rdfs:label "Wireless_LAN" . 
+uni:Wireless_LAN uni:link <http://dbpedia.org/resource/Wireless_LAN> . 
+uni:Personal_area_network a uni:topic .
+uni:Personal_area_network rdfs:label "Personal_area_network" . 
+uni:Personal_area_network uni:link <http://dbpedia.org/resource/Personal_area_network> . 
+uni:Metropolitan_area_network a uni:topic .
+uni:Metropolitan_area_network rdfs:label "Metropolitan_area_network" . 
+uni:Metropolitan_area_network uni:link <http://dbpedia.org/resource/Metropolitan_area_network> . 
+uni:Wireless_sensor_network a uni:topic .
+uni:Wireless_sensor_network rdfs:label "Wireless_sensor_network" . 
+uni:Wireless_sensor_network uni:link <http://dbpedia.org/resource/Wireless_sensor_network> . 
+uni:Network_topology a uni:topic .
+uni:Network_topology rdfs:label "Network_topology" . 
+uni:Network_topology uni:link <http://dbpedia.org/resource/Network_topology> . 
+uni:Semantics a uni:topic .
+uni:Semantics rdfs:label "Semantics" . 
+uni:Semantics uni:link <http://dbpedia.org/resource/Semantics> . 
+uni:Semantics a uni:topic .
+uni:Semantics rdfs:label "Semantics" . 
+uni:Semantics uni:link <http://dbpedia.org/resource/Semantics> . 
+uni:Model_theory a uni:topic .
+uni:Model_theory rdfs:label "Model_theory" . 
+uni:Model_theory uni:link <http://dbpedia.org/resource/Model_theory> . 
+uni:Logic a uni:topic .
+uni:Logic rdfs:label "Logic" . 
+uni:Logic uni:link <http://dbpedia.org/resource/Logic> . 
+uni:Temporal_logic a uni:topic .
+uni:Temporal_logic rdfs:label "Temporal_logic" . 
+uni:Temporal_logic uni:link <http://dbpedia.org/resource/Temporal_logic> . 
+uni:Distributed_computing a uni:topic .
+uni:Distributed_computing rdfs:label "Distributed_computing" . 
+uni:Distributed_computing uni:link <http://dbpedia.org/resource/Distributed_computing> . 
+uni:Cryptography a uni:topic .
+uni:Cryptography rdfs:label "Cryptography" . 
+uni:Cryptography uni:link <http://dbpedia.org/resource/Cryptography> . 
+uni:Information_theory a uni:topic .
+uni:Information_theory rdfs:label "Information_theory" . 
+uni:Information_theory uni:link <http://dbpedia.org/resource/Information_theory> . 
+uni:Symmetric-key_algorithm a uni:topic .
+uni:Symmetric-key_algorithm rdfs:label "Symmetric-key_algorithm" . 
+uni:Symmetric-key_algorithm uni:link <http://dbpedia.org/resource/Symmetric-key_algorithm> . 
+uni:Cryptography a uni:topic .
+uni:Cryptography rdfs:label "Cryptography" . 
+uni:Cryptography uni:link <http://dbpedia.org/resource/Cryptography> . 
+uni:Advanced_Encryption_Standard a uni:topic .
+uni:Advanced_Encryption_Standard rdfs:label "Advanced_Encryption_Standard" . 
+uni:Advanced_Encryption_Standard uni:link <http://dbpedia.org/resource/Advanced_Encryption_Standard> . 
+uni:Advanced_Encryption_Standard a uni:topic .
+uni:Advanced_Encryption_Standard rdfs:label "Advanced_Encryption_Standard" . 
+uni:Advanced_Encryption_Standard uni:link <http://dbpedia.org/resource/Advanced_Encryption_Standard> . 
+uni:Cryptographic_hash_function a uni:topic .
+uni:Cryptographic_hash_function rdfs:label "Cryptographic_hash_function" . 
+uni:Cryptographic_hash_function uni:link <http://dbpedia.org/resource/Cryptographic_hash_function> . 
+uni:Authentication a uni:topic .
+uni:Authentication rdfs:label "Authentication" . 
+uni:Authentication uni:link <http://dbpedia.org/resource/Authentication> . 
+uni:Data_integrity a uni:topic .
+uni:Data_integrity rdfs:label "Data_integrity" . 
+uni:Data_integrity uni:link <http://dbpedia.org/resource/Data_integrity> . 
+uni:Key_distribution a uni:topic .
+uni:Key_distribution rdfs:label "Key_distribution" . 
+uni:Key_distribution uni:link <http://dbpedia.org/resource/Key_distribution> . 
+uni:Confidentiality a uni:topic .
+uni:Confidentiality rdfs:label "Confidentiality" . 
+uni:Confidentiality uni:link <http://dbpedia.org/resource/Confidentiality> . 
+uni:Access_control a uni:topic .
+uni:Access_control rdfs:label "Access_control" . 
+uni:Access_control uni:link <http://dbpedia.org/resource/Access_control> . 
+uni:Non-repudiation a uni:topic .
+uni:Non-repudiation rdfs:label "Non-repudiation" . 
+uni:Non-repudiation uni:link <http://dbpedia.org/resource/Non-repudiation> . 
+uni:Public-key_cryptography a uni:topic .
+uni:Public-key_cryptography rdfs:label "Public-key_cryptography" . 
+uni:Public-key_cryptography uni:link <http://dbpedia.org/resource/Public-key_cryptography> . 
+uni:Digital_data a uni:topic .
+uni:Digital_data rdfs:label "Digital_data" . 
+uni:Digital_data uni:link <http://dbpedia.org/resource/Digital_data> . 
+uni:Challenge_response_authentication a uni:topic .
+uni:Challenge_response_authentication rdfs:label "Challenge_response_authentication" . 
+uni:Challenge_response_authentication uni:link <http://dbpedia.org/resource/Challenge_response_authentication> . 
+uni:Deductive_database a uni:topic .
+uni:Deductive_database rdfs:label "Deductive_database" . 
+uni:Deductive_database uni:link <http://dbpedia.org/resource/Deductive_database> . 
+uni:Query_optimization a uni:topic .
+uni:Query_optimization rdfs:label "Query_optimization" . 
+uni:Query_optimization uni:link <http://dbpedia.org/resource/Query_optimization> . 
+uni:Incomplete_Backstreet_Boys_song a uni:topic .
+uni:Incomplete_Backstreet_Boys_song rdfs:label "Incomplete_Backstreet_Boys_song" . 
+uni:Incomplete_Backstreet_Boys_song uni:link <http://dbpedia.org/resource/Incomplete_Backstreet_Boys_song> . 
+uni:Amortized_analysis a uni:topic .
+uni:Amortized_analysis rdfs:label "Amortized_analysis" . 
+uni:Amortized_analysis uni:link <http://dbpedia.org/resource/Amortized_analysis> . 
+uni:Computer_graphics a uni:topic .
+uni:Computer_graphics rdfs:label "Computer_graphics" . 
+uni:Computer_graphics uni:link <http://dbpedia.org/resource/Computer_graphics> . 
+uni:Pattern_recognition a uni:topic .
+uni:Pattern_recognition rdfs:label "Pattern_recognition" . 
+uni:Pattern_recognition uni:link <http://dbpedia.org/resource/Pattern_recognition> . 
+uni:Data_acquisition a uni:topic .
+uni:Data_acquisition rdfs:label "Data_acquisition" . 
+uni:Data_acquisition uni:link <http://dbpedia.org/resource/Data_acquisition> . 
+uni:Feature_extraction a uni:topic .
+uni:Feature_extraction rdfs:label "Feature_extraction" . 
+uni:Feature_extraction uni:link <http://dbpedia.org/resource/Feature_extraction> . 
+uni:Principal_component_analysis a uni:topic .
+uni:Principal_component_analysis rdfs:label "Principal_component_analysis" . 
+uni:Principal_component_analysis uni:link <http://dbpedia.org/resource/Principal_component_analysis> . 
+uni:Expert_system a uni:topic .
+uni:Expert_system rdfs:label "Expert_system" . 
+uni:Expert_system uni:link <http://dbpedia.org/resource/Expert_system> . 
+uni:Artificial_neural_network a uni:topic .
+uni:Artificial_neural_network rdfs:label "Artificial_neural_network" . 
+uni:Artificial_neural_network uni:link <http://dbpedia.org/resource/Artificial_neural_network> . 
+uni:Digital_image_processing a uni:topic .
+uni:Digital_image_processing rdfs:label "Digital_image_processing" . 
+uni:Digital_image_processing uni:link <http://dbpedia.org/resource/Digital_image_processing> . 
+uni:Shape a uni:topic .
+uni:Shape rdfs:label "Shape" . 
+uni:Shape uni:link <http://dbpedia.org/resource/Shape> . 
+uni:Wavelet a uni:topic .
+uni:Wavelet rdfs:label "Wavelet" . 
+uni:Wavelet uni:link <http://dbpedia.org/resource/Wavelet> . 
+uni:Multiresolution_analysis a uni:topic .
+uni:Multiresolution_analysis rdfs:label "Multiresolution_analysis" . 
+uni:Multiresolution_analysis uni:link <http://dbpedia.org/resource/Multiresolution_analysis> . 
+uni:Partial_differential_equation a uni:topic .
+uni:Partial_differential_equation rdfs:label "Partial_differential_equation" . 
+uni:Partial_differential_equation uni:link <http://dbpedia.org/resource/Partial_differential_equation> . 
+uni:Calculus_of_variations a uni:topic .
+uni:Calculus_of_variations rdfs:label "Calculus_of_variations" . 
+uni:Calculus_of_variations uni:link <http://dbpedia.org/resource/Calculus_of_variations> . 
+uni:Diffusion_equation a uni:topic .
+uni:Diffusion_equation rdfs:label "Diffusion_equation" . 
+uni:Diffusion_equation uni:link <http://dbpedia.org/resource/Diffusion_equation> . 
+uni:Markov_random_field a uni:topic .
+uni:Markov_random_field rdfs:label "Markov_random_field" . 
+uni:Markov_random_field uni:link <http://dbpedia.org/resource/Markov_random_field> . 
+uni:Bayesian_inference a uni:topic .
+uni:Bayesian_inference rdfs:label "Bayesian_inference" . 
+uni:Bayesian_inference uni:link <http://dbpedia.org/resource/Bayesian_inference> . 
+uni:Energy a uni:topic .
+uni:Energy rdfs:label "Energy" . 
+uni:Energy uni:link <http://dbpedia.org/resource/Energy> . 
+uni:Level-set_method a uni:topic .
+uni:Level-set_method rdfs:label "Level-set_method" . 
+uni:Level-set_method uni:link <http://dbpedia.org/resource/Level-set_method> . 
+uni:Inpainting a uni:topic .
+uni:Inpainting rdfs:label "Inpainting" . 
+uni:Inpainting uni:link <http://dbpedia.org/resource/Inpainting> . 
+uni:College_of_Osteopathic_Medicine_of_the_Pacific a uni:topic .
+uni:College_of_Osteopathic_Medicine_of_the_Pacific rdfs:label "College_of_Osteopathic_Medicine_of_the_Pacific" . 
+uni:College_of_Osteopathic_Medicine_of_the_Pacific uni:link <http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific> . 
+uni:Software_engineering a uni:topic .
+uni:Software_engineering rdfs:label "Software_engineering" . 
+uni:Software_engineering uni:link <http://dbpedia.org/resource/Software_engineering> . 
+uni:Version_control a uni:topic .
+uni:Version_control rdfs:label "Version_control" . 
+uni:Version_control uni:link <http://dbpedia.org/resource/Version_control> . 
+uni:Code_review a uni:topic .
+uni:Code_review rdfs:label "Code_review" . 
+uni:Code_review uni:link <http://dbpedia.org/resource/Code_review> . 
+uni:Continuous_integration a uni:topic .
+uni:Continuous_integration rdfs:label "Continuous_integration" . 
+uni:Continuous_integration uni:link <http://dbpedia.org/resource/Continuous_integration> . 
+uni:Open-source_model a uni:topic .
+uni:Open-source_model rdfs:label "Open-source_model" . 
+uni:Open-source_model uni:link <http://dbpedia.org/resource/Open-source_model> . 
+uni:System_analysis a uni:topic .
+uni:System_analysis rdfs:label "System_analysis" . 
+uni:System_analysis uni:link <http://dbpedia.org/resource/System_analysis> . 
+uni:Semantic_Web a uni:topic .
+uni:Semantic_Web rdfs:label "Semantic_Web" . 
+uni:Semantic_Web uni:link <http://dbpedia.org/resource/Semantic_Web> . 
+uni:Text_mining a uni:topic .
+uni:Text_mining rdfs:label "Text_mining" . 
+uni:Text_mining uni:link <http://dbpedia.org/resource/Text_mining> . 
+uni:Collaborative_filtering a uni:topic .
+uni:Collaborative_filtering rdfs:label "Collaborative_filtering" . 
+uni:Collaborative_filtering uni:link <http://dbpedia.org/resource/Collaborative_filtering> . 
+uni:Blogosphere a uni:topic .
+uni:Blogosphere rdfs:label "Blogosphere" . 
+uni:Blogosphere uni:link <http://dbpedia.org/resource/Blogosphere> . 
+uni:Machine_learning a uni:topic .
+uni:Machine_learning rdfs:label "Machine_learning" . 
+uni:Machine_learning uni:link <http://dbpedia.org/resource/Machine_learning> . 
+uni:World_Wide_Web a uni:topic .
+uni:World_Wide_Web rdfs:label "World_Wide_Web" . 
+uni:World_Wide_Web uni:link <http://dbpedia.org/resource/World_Wide_Web> . 
+uni:Semantic_Web a uni:topic .
+uni:Semantic_Web rdfs:label "Semantic_Web" . 
+uni:Semantic_Web uni:link <http://dbpedia.org/resource/Semantic_Web> . 
+uni:Resource_Description_Framework a uni:topic .
+uni:Resource_Description_Framework rdfs:label "Resource_Description_Framework" . 
+uni:Resource_Description_Framework uni:link <http://dbpedia.org/resource/Resource_Description_Framework> . 
+uni:RDF_Schema a uni:topic .
+uni:RDF_Schema rdfs:label "RDF_Schema" . 
+uni:RDF_Schema uni:link <http://dbpedia.org/resource/RDF_Schema> . 
+uni:SPARQL a uni:topic .
+uni:SPARQL rdfs:label "SPARQL" . 
+uni:SPARQL uni:link <http://dbpedia.org/resource/SPARQL> . 
+uni:Linked_data a uni:topic .
+uni:Linked_data rdfs:label "Linked_data" . 
+uni:Linked_data uni:link <http://dbpedia.org/resource/Linked_data> . 
+uni:Linked_data a uni:topic .
+uni:Linked_data rdfs:label "Linked_data" . 
+uni:Linked_data uni:link <http://dbpedia.org/resource/Linked_data> . 
+uni:Ontology a uni:topic .
+uni:Ontology rdfs:label "Ontology" . 
+uni:Ontology uni:link <http://dbpedia.org/resource/Ontology> . 
+uni:Software_development a uni:topic .
+uni:Software_development rdfs:label "Software_development" . 
+uni:Software_development uni:link <http://dbpedia.org/resource/Software_development> . 
+uni:Business_intelligence a uni:topic .
+uni:Business_intelligence rdfs:label "Business_intelligence" . 
+uni:Business_intelligence uni:link <http://dbpedia.org/resource/Business_intelligence> . 
+uni:E-commerce a uni:topic .
+uni:E-commerce rdfs:label "E-commerce" . 
+uni:E-commerce uni:link <http://dbpedia.org/resource/E-commerce> . 
+uni:E-Science a uni:topic .
+uni:E-Science rdfs:label "E-Science" . 
+uni:E-Science uni:link <http://dbpedia.org/resource/E-Science> . 
+uni:Formal_methods a uni:topic .
+uni:Formal_methods rdfs:label "Formal_methods" . 
+uni:Formal_methods uni:link <http://dbpedia.org/resource/Formal_methods> . 
+uni:Software_release_life_cycle a uni:topic .
+uni:Software_release_life_cycle rdfs:label "Software_release_life_cycle" . 
+uni:Software_release_life_cycle uni:link <http://dbpedia.org/resource/Software_release_life_cycle> . 
+uni:Software_development_process a uni:topic .
+uni:Software_development_process rdfs:label "Software_development_process" . 
+uni:Software_development_process uni:link <http://dbpedia.org/resource/Software_development_process> . 
+uni:Formal_specification a uni:topic .
+uni:Formal_specification rdfs:label "Formal_specification" . 
+uni:Formal_specification uni:link <http://dbpedia.org/resource/Formal_specification> . 
+uni:Finite-state_machine a uni:topic .
+uni:Finite-state_machine rdfs:label "Finite-state_machine" . 
+uni:Finite-state_machine uni:link <http://dbpedia.org/resource/Finite-state_machine> . 
+uni:Software_development a uni:topic .
+uni:Software_development rdfs:label "Software_development" . 
+uni:Software_development uni:link <http://dbpedia.org/resource/Software_development> . 
+uni:Type_system a uni:topic .
+uni:Type_system rdfs:label "Type_system" . 
+uni:Type_system uni:link <http://dbpedia.org/resource/Type_system> . 
+uni:Debugging a uni:topic .
+uni:Debugging rdfs:label "Debugging" . 
+uni:Debugging uni:link <http://dbpedia.org/resource/Debugging> . 
+uni:Automatic_programming a uni:topic .
+uni:Automatic_programming rdfs:label "Automatic_programming" . 
+uni:Automatic_programming uni:link <http://dbpedia.org/resource/Automatic_programming> . 
+uni:Software_maintenance a uni:topic .
+uni:Software_maintenance rdfs:label "Software_maintenance" . 
+uni:Software_maintenance uni:link <http://dbpedia.org/resource/Software_maintenance> . 
+uni:Cognition a uni:topic .
+uni:Cognition rdfs:label "Cognition" . 
+uni:Cognition uni:link <http://dbpedia.org/resource/Cognition> . 
+uni:Software_visualization a uni:topic .
+uni:Software_visualization rdfs:label "Software_visualization" . 
+uni:Software_visualization uni:link <http://dbpedia.org/resource/Software_visualization> . 
+uni:Computer-aided_software_engineering a uni:topic .
+uni:Computer-aided_software_engineering rdfs:label "Computer-aided_software_engineering" . 
+uni:Computer-aided_software_engineering uni:link <http://dbpedia.org/resource/Computer-aided_software_engineering> . 
+uni:Reverse_engineering a uni:topic .
+uni:Reverse_engineering rdfs:label "Reverse_engineering" . 
+uni:Reverse_engineering uni:link <http://dbpedia.org/resource/Reverse_engineering> . 
+uni:Static_program_analysis a uni:topic .
+uni:Static_program_analysis rdfs:label "Static_program_analysis" . 
+uni:Static_program_analysis uni:link <http://dbpedia.org/resource/Static_program_analysis> . 
+uni:Software_configuration_management a uni:topic .
+uni:Software_configuration_management rdfs:label "Software_configuration_management" . 
+uni:Software_configuration_management uni:link <http://dbpedia.org/resource/Software_configuration_management> . 
+uni:Program_comprehension a uni:topic .
+uni:Program_comprehension rdfs:label "Program_comprehension" . 
+uni:Program_comprehension uni:link <http://dbpedia.org/resource/Program_comprehension> . 
+uni:Self-documenting_code a uni:topic .
+uni:Self-documenting_code rdfs:label "Self-documenting_code" . 
+uni:Self-documenting_code uni:link <http://dbpedia.org/resource/Self-documenting_code> . 
+uni:Software_configuration_management a uni:topic .
+uni:Software_configuration_management rdfs:label "Software_configuration_management" . 
+uni:Software_configuration_management uni:link <http://dbpedia.org/resource/Software_configuration_management> . 
+uni:Unit_testing a uni:topic .
+uni:Unit_testing rdfs:label "Unit_testing" . 
+uni:Unit_testing uni:link <http://dbpedia.org/resource/Unit_testing> . 
+uni:Thread_computing a uni:topic .
+uni:Thread_computing rdfs:label "Thread_computing" . 
+uni:Thread_computing uni:link <http://dbpedia.org/resource/Thread_computing> . 
+uni:Parallel_computing a uni:topic .
+uni:Parallel_computing rdfs:label "Parallel_computing" . 
+uni:Parallel_computing uni:link <http://dbpedia.org/resource/Parallel_computing> . 
+uni:Code_reuse a uni:topic .
+uni:Code_reuse rdfs:label "Code_reuse" . 
+uni:Code_reuse uni:link <http://dbpedia.org/resource/Code_reuse> . 
+uni:Fault_tolerance a uni:topic .
+uni:Fault_tolerance rdfs:label "Fault_tolerance" . 
+uni:Fault_tolerance uni:link <http://dbpedia.org/resource/Fault_tolerance> . 
+uni:Software_design a uni:topic .
+uni:Software_design rdfs:label "Software_design" . 
+uni:Software_design uni:link <http://dbpedia.org/resource/Software_design> . 
+uni:Design_methods a uni:topic .
+uni:Design_methods rdfs:label "Design_methods" . 
+uni:Design_methods uni:link <http://dbpedia.org/resource/Design_methods> . 
+uni:Object-oriented_programming a uni:topic .
+uni:Object-oriented_programming rdfs:label "Object-oriented_programming" . 
+uni:Object-oriented_programming uni:link <http://dbpedia.org/resource/Object-oriented_programming> . 
+uni:Software_design_pattern a uni:topic .
+uni:Software_design_pattern rdfs:label "Software_design_pattern" . 
+uni:Software_design_pattern uni:link <http://dbpedia.org/resource/Software_design_pattern> . 
+uni:Software_design_pattern a uni:topic .
+uni:Software_design_pattern rdfs:label "Software_design_pattern" . 
+uni:Software_design_pattern uni:link <http://dbpedia.org/resource/Software_design_pattern> . 
+uni:Model-driven_architecture a uni:topic .
+uni:Model-driven_architecture rdfs:label "Model-driven_architecture" . 
+uni:Model-driven_architecture uni:link <http://dbpedia.org/resource/Model-driven_architecture> . 
+uni:Service-oriented_architecture a uni:topic .
+uni:Service-oriented_architecture rdfs:label "Service-oriented_architecture" . 
+uni:Service-oriented_architecture uni:link <http://dbpedia.org/resource/Service-oriented_architecture> . 
+uni:Service-oriented_architecture a uni:topic .
+uni:Service-oriented_architecture rdfs:label "Service-oriented_architecture" . 
+uni:Service-oriented_architecture uni:link <http://dbpedia.org/resource/Service-oriented_architecture> . 
+uni:Cloud_computing a uni:topic .
+uni:Cloud_computing rdfs:label "Cloud_computing" . 
+uni:Cloud_computing uni:link <http://dbpedia.org/resource/Cloud_computing> . 
+uni:Requirements_engineering a uni:topic .
+uni:Requirements_engineering rdfs:label "Requirements_engineering" . 
+uni:Requirements_engineering uni:link <http://dbpedia.org/resource/Requirements_engineering> . 
+uni:Software_development_process a uni:topic .
+uni:Software_development_process rdfs:label "Software_development_process" . 
+uni:Software_development_process uni:link <http://dbpedia.org/resource/Software_development_process> . 
+uni:Requirements_elicitation a uni:topic .
+uni:Requirements_elicitation rdfs:label "Requirements_elicitation" . 
+uni:Requirements_elicitation uni:link <http://dbpedia.org/resource/Requirements_elicitation> . 
+uni:Risk_analysis a uni:topic .
+uni:Risk_analysis rdfs:label "Risk_analysis" . 
+uni:Risk_analysis uni:link <http://dbpedia.org/resource/Risk_analysis> . 
+uni:Language_documentation a uni:topic .
+uni:Language_documentation rdfs:label "Language_documentation" . 
+uni:Language_documentation uni:link <http://dbpedia.org/resource/Language_documentation> . 
+uni:Institute_of_Electrical_and_Electronics_Engineers a uni:topic .
+uni:Institute_of_Electrical_and_Electronics_Engineers rdfs:label "Institute_of_Electrical_and_Electronics_Engineers" . 
+uni:Institute_of_Electrical_and_Electronics_Engineers uni:link <http://dbpedia.org/resource/Institute_of_Electrical_and_Electronics_Engineers> . 
+uni:International_Organization_for_Standardization a uni:topic .
+uni:International_Organization_for_Standardization rdfs:label "International_Organization_for_Standardization" . 
+uni:International_Organization_for_Standardization uni:link <http://dbpedia.org/resource/International_Organization_for_Standardization> . 
+uni:Agile_software_development a uni:topic .
+uni:Agile_software_development rdfs:label "Agile_software_development" . 
+uni:Agile_software_development uni:link <http://dbpedia.org/resource/Agile_software_development> . 
+uni:User_story a uni:topic .
+uni:User_story rdfs:label "User_story" . 
+uni:User_story uni:link <http://dbpedia.org/resource/User_story> . 
+uni:Formal_specification a uni:topic .
+uni:Formal_specification rdfs:label "Formal_specification" . 
+uni:Formal_specification uni:link <http://dbpedia.org/resource/Formal_specification> . 
+uni:Formal_language a uni:topic .
+uni:Formal_language rdfs:label "Formal_language" . 
+uni:Formal_language uni:link <http://dbpedia.org/resource/Formal_language> . 
+uni:Quality_assurance a uni:topic .
+uni:Quality_assurance rdfs:label "Quality_assurance" . 
+uni:Quality_assurance uni:link <http://dbpedia.org/resource/Quality_assurance> . 
+uni:Evolution a uni:topic .
+uni:Evolution rdfs:label "Evolution" . 
+uni:Evolution uni:link <http://dbpedia.org/resource/Evolution> . 
+uni:Unified_Modeling_Language a uni:topic .
+uni:Unified_Modeling_Language rdfs:label "Unified_Modeling_Language" . 
+uni:Unified_Modeling_Language uni:link <http://dbpedia.org/resource/Unified_Modeling_Language> . 
+uni:Upper_ontology a uni:topic .
+uni:Upper_ontology rdfs:label "Upper_ontology" . 
+uni:Upper_ontology uni:link <http://dbpedia.org/resource/Upper_ontology> . 
+uni:Domain-specific_language a uni:topic .
+uni:Domain-specific_language rdfs:label "Domain-specific_language" . 
+uni:Domain-specific_language uni:link <http://dbpedia.org/resource/Domain-specific_language> . 
+uni:Test_cricket a uni:topic .
+uni:Test_cricket rdfs:label "Test_cricket" . 
+uni:Test_cricket uni:link <http://dbpedia.org/resource/Test_cricket> . 
+uni:Preventive_maintenance a uni:topic .
+uni:Preventive_maintenance rdfs:label "Preventive_maintenance" . 
+uni:Preventive_maintenance uni:link <http://dbpedia.org/resource/Preventive_maintenance> . 
+uni:Evolution a uni:topic .
+uni:Evolution rdfs:label "Evolution" . 
+uni:Evolution uni:link <http://dbpedia.org/resource/Evolution> . 
+uni:Static_program_analysis a uni:topic .
+uni:Static_program_analysis rdfs:label "Static_program_analysis" . 
+uni:Static_program_analysis uni:link <http://dbpedia.org/resource/Static_program_analysis> . 
+uni:Computer_science a uni:topic .
+uni:Computer_science rdfs:label "Computer_science" . 
+uni:Computer_science uni:link <http://dbpedia.org/resource/Computer_science> . 
+uni:Software_engineering a uni:topic .
+uni:Software_engineering rdfs:label "Software_engineering" . 
+uni:Software_engineering uni:link <http://dbpedia.org/resource/Software_engineering> . 
+uni:Software_engineering a uni:topic .
+uni:Software_engineering rdfs:label "Software_engineering" . 
+uni:Software_engineering uni:link <http://dbpedia.org/resource/Software_engineering> . 
+uni:Software_measurement a uni:topic .
+uni:Software_measurement rdfs:label "Software_measurement" . 
+uni:Software_measurement uni:link <http://dbpedia.org/resource/Software_measurement> . 
+uni:Project_management a uni:topic .
+uni:Project_management rdfs:label "Project_management" . 
+uni:Project_management uni:link <http://dbpedia.org/resource/Project_management> . 
+uni:Human_computer a uni:topic .
+uni:Human_computer rdfs:label "Human_computer" . 
+uni:Human_computer uni:link <http://dbpedia.org/resource/Human_computer> . 
+uni:User-centered_design a uni:topic .
+uni:User-centered_design rdfs:label "User-centered_design" . 
+uni:User-centered_design uni:link <http://dbpedia.org/resource/User-centered_design> . 
+uni:Task_analysis a uni:topic .
+uni:Task_analysis rdfs:label "Task_analysis" . 
+uni:Task_analysis uni:link <http://dbpedia.org/resource/Task_analysis> . 
+uni:User_interface_design a uni:topic .
+uni:User_interface_design rdfs:label "User_interface_design" . 
+uni:User_interface_design uni:link <http://dbpedia.org/resource/User_interface_design> . 
+uni:User_interface a uni:topic .
+uni:User_interface rdfs:label "User_interface" . 
+uni:User_interface uni:link <http://dbpedia.org/resource/User_interface> . 
+uni:Multimedia a uni:topic .
+uni:Multimedia rdfs:label "Multimedia" . 
+uni:Multimedia uni:link <http://dbpedia.org/resource/Multimedia> . 
+uni:3D_modeling a uni:topic .
+uni:3D_modeling rdfs:label "3D_modeling" . 
+uni:3D_modeling uni:link <http://dbpedia.org/resource/3D_modeling> . 
+uni:Computer_science a uni:topic .
+uni:Computer_science rdfs:label "Computer_science" . 
+uni:Computer_science uni:link <http://dbpedia.org/resource/Computer_science> . 
+uni:Software_engineering a uni:topic .
+uni:Software_engineering rdfs:label "Software_engineering" . 
+uni:Software_engineering uni:link <http://dbpedia.org/resource/Software_engineering> . 
+uni:Service-oriented_architecture a uni:topic .
+uni:Service-oriented_architecture rdfs:label "Service-oriented_architecture" . 
+uni:Service-oriented_architecture uni:link <http://dbpedia.org/resource/Service-oriented_architecture> . 
+uni:Web_service a uni:topic .
+uni:Web_service rdfs:label "Web_service" . 
+uni:Web_service uni:link <http://dbpedia.org/resource/Web_service> . 
+uni:SOAP a uni:topic .
+uni:SOAP rdfs:label "SOAP" . 
+uni:SOAP uni:link <http://dbpedia.org/resource/SOAP> . 
+uni:Service-oriented_architecture a uni:topic .
+uni:Service-oriented_architecture rdfs:label "Service-oriented_architecture" . 
+uni:Service-oriented_architecture uni:link <http://dbpedia.org/resource/Service-oriented_architecture> . 
+uni:Representational_state_transfer a uni:topic .
+uni:Representational_state_transfer rdfs:label "Representational_state_transfer" . 
+uni:Representational_state_transfer uni:link <http://dbpedia.org/resource/Representational_state_transfer> . 
+uni:Process_modeling a uni:topic .
+uni:Process_modeling rdfs:label "Process_modeling" . 
+uni:Process_modeling uni:link <http://dbpedia.org/resource/Process_modeling> . 
+uni:Computer_science a uni:topic .
+uni:Computer_science rdfs:label "Computer_science" . 
+uni:Computer_science uni:link <http://dbpedia.org/resource/Computer_science> . 
+uni:Soen a uni:topic .
+uni:Soen rdfs:label "Soen" . 
+uni:Soen uni:link <http://dbpedia.org/resource/Soen> . 
+uni:Agnes a uni:Student ;
+  foaf:givenName   "Agnes" ;
+  foaf:familyName    "Zed" ;
+  uni:enrolled_at  dbr:Concordia_University ;
+  foaf:mbox    "A@concordia.ca" ;
+  uni:hasStudentID           "A0A0A0A0" .
+
+uni:Bart a uni:Student ;
+  foaf:givenName   "Bart" ;
+  foaf:familyName    "Why" ;
+  uni:enrolled_at  dbr:Concordia_University ;
+  foaf:mbox    "B@concordia.ca" ;
+  uni:hasStudentID           "B1B1B1B1" .
+
+uni:Cindy a uni:Student ;
+  foaf:givenName   "Cindy" ;
+  foaf:familyName    "Ex" ;
+  uni:enrolled_at  dbr:Concordia_University ;
+  foaf:mbox    "C@concordia.ca" ;
+  uni:hasStudentID           "C2C2C2C2" .
+
+uni:Darwin a uni:Student ;
+  foaf:givenName   "Darwin" ;
+  foaf:familyName    "Dubyou" ;
+  uni:enrolled_at  dbr:Concordia_University ;
+  foaf:mbox    "D@concordia.ca" ;
+  uni:hasStudentID           "D3D3D3D3" .
+
+uni:Edna a uni:Student ;
+  foaf:givenName   "Edna" ;
+  foaf:familyName    "Vee" ;
+  uni:enrolled_at  dbr:Concordia_University ;
+  foaf:mbox    "E@concordia.ca" ;
+  uni:hasStudentID           "E4E4E4E4" .
+
+uni:Francie a uni:Student ;
+  foaf:givenName   "Francie" ;
+  foaf:familyName    "You" ;
+  uni:enrolled_at  dbr:Concordia_University ;
+  foaf:mbox    "F@concordia.ca" ;
+  uni:hasStudentID           "F5F5F5F5" .
+
+uni:Gene a uni:Student ;
+  foaf:givenName   "Gene" ;
+  foaf:familyName    "Tee" ;
+  uni:enrolled_at  dbr:Concordia_University ;
+  foaf:mbox    "G@concordia.ca" ;
+  uni:hasStudentID           "G6G6G6G6" .
+
+uni:Helmut a uni:Student ;
+  foaf:givenName   "Helmut" ;
+  foaf:familyName    "Ess" ;
+  uni:enrolled_at  dbr:Concordia_University ;
+  foaf:mbox    "H@concordia.ca" ;
+  uni:hasStudentID           "H7H7H7H7" .
+
+uni:Ingrid a uni:Student ;
+  foaf:givenName   "Ingrid" ;
+  foaf:familyName    "Are" ;
+  uni:enrolled_at  dbr:Concordia_University ;
+  foaf:mbox    "I@concordia.ca" ;
+  uni:hasStudentID           "I8I8I8i8" .
+
+uni:Janet a uni:Student ;
+  foaf:givenName   "Janet" ;
+  foaf:familyName    "Que" ;
+  uni:enrolled_at  dbr:Concordia_University ;
+  foaf:mbox    "J@concordia.ca" ;
+  uni:hasStudentID           "J9J9J9" .
+
+uni:Agnes uni:gotBin uni:COMP6231 .
+uni:Bart uni:gotAin uni:COMP6231 .
+uni:Cindy uni:gotCin uni:COMP6231 .
+uni:Darwin uni:gotDin uni:COMP6231 .
+uni:Edna uni:gotAin uni:COMP6231 .
+uni:Francie uni:gotBin uni:COMP6231 .
+uni:Ingrid uni:gotFin uni:COMP6231 .
+uni:Janet uni:gotFin uni:COMP6231 .
+uni:Gene uni:gotAin uni:COMP6231 .
+uni:Helmut uni:gotCin uni:COMP6231 .
+uni:Ingrid uni:gotAin uni:COMP6351 .
+uni:Janet uni:gotFin uni:COMP6351 .
+uni:Agnes uni:gotBin uni:COMP6421 .
+uni:Bart uni:gotCin uni:COMP6421 .
+uni:Cindy uni:gotAin uni:COMP6421 .
+uni:Darwin uni:gotCin uni:COMP6421 .
+uni:Edna uni:gotDin uni:COMP6421 .
+uni:Francie uni:gotBin uni:COMP6421 .
+uni:Gene uni:gotCin uni:COMP6421 .
+uni:Helmut uni:gotFin uni:COMP6421 .
+uni:Ingrid uni:gotBin uni:COMP6421 .
+uni:Janet uni:gotAin uni:COMP6421 .
+uni:Agnes uni:gotAin uni:COMP6311 .
+uni:Bart uni:gotCin uni:COMP6311 .
+uni:Cindy uni:gotDin uni:COMP6311 .
+uni:Darwin uni:gotBin uni:COMP6311 .
+uni:Edna uni:gotCin uni:COMP6311 .
+uni:Francie uni:gotFin uni:COMP6311 .
+uni:Gene uni:gotBin uni:COMP6311 .
+uni:Helmut uni:gotAin uni:COMP6311 .
+uni:Ingrid uni:gotCin uni:COMP6311 .
+uni:Janet uni:gotDin uni:SOEN6311 .
+uni:Darwin uni:gotBin uni:SOEN6311 .
+uni:Edna uni:gotAin uni:SOEN6311 .
+uni:Francie uni:gotCin uni:SOEN6311 .
+uni:Gene uni:gotAin uni:SOEN6311 .
+uni:Helmut uni:gotFin uni:SOEN6311 .
+uni:Ingrid uni:gotBin uni:SOEN6311 .
+uni:Janet uni:gotCin uni:SOEN6311 .

@@ -1,0 +1,449 @@
+course_id,topic,uri
+COMP 6231 Distributed System Design,distributed computing,http://dbpedia.org/resource/Distributed_computing
+COMP 6231 Distributed System Design,scalability,http://dbpedia.org/resource/Scalability
+COMP 6231 Distributed System Design,concurrency,http://dbpedia.org/resource/Concurrent_computing
+COMP 6231 Distributed System Design,fault tolerance,http://dbpedia.org/resource/Fault_tolerance
+COMP 6231 Distributed System Design,client-server,http://dbpedia.org/resource/Client�server_model
+COMP 6231 Distributed System Design,interprocess communication,http://dbpedia.org/resource/Inter-process_communication
+COMP 6231 Distributed System Design,communication,http://dbpedia.org/resource/Communication
+COMP 6231 Distributed System Design,remote procedure call,http://dbpedia.org/resource/Remote_procedure_call
+COMP 6231 Distributed System Design,corba,http://dbpedia.org/resource/Common_Object_Request_Broker_Architecture
+COMP 6231 Distributed System Design,server,http://dbpedia.org/resource/Web_server
+COMP 6231 Distributed System Design,fault tolerance,http://dbpedia.org/resource/Fault_tolerance
+COMP 6231 Distributed System Design,concurrency control,http://dbpedia.org/resource/Concurrency_control
+COMP 6231 Distributed System Design,fault-tolerant,http://dbpedia.org/resource/Fault_tolerance
+COMP 6231 Distributed System Design,distributed systems,http://dbpedia.org/resource/Distributed_computing
+COMP 6281 Parallel Programming (*),neumann,http://dbpedia.org/resource/Balthasar_Neumann
+COMP 6281 Parallel Programming (*),parallel processing,http://dbpedia.org/resource/Parallel_computing
+COMP 6281 Parallel Programming (*),message-passing,http://dbpedia.org/resource/Message_passing
+COMP 6281 Parallel Programming (*),massively parallel,http://dbpedia.org/resource/MIMD
+COMP 6281 Parallel Programming (*),commodity,http://dbpedia.org/resource/Commodity_computing
+COMP 6281 Parallel Programming (*),parallel processing,http://dbpedia.org/resource/Parallel_computing
+COMP 6281 Parallel Programming (*),multi-core,http://dbpedia.org/resource/Multi-core_processor
+COMP 6281 Parallel Programming (*),heterogeneous computing,http://dbpedia.org/resource/Heterogeneous_computing
+COMP 6281 Parallel Programming (*),memory,http://dbpedia.org/resource/Computer_memory
+COMP 6281 Parallel Programming (*),load balancing,http://dbpedia.org/resource/Weight_distribution
+COMP 6281 Parallel Programming (*),message passing,http://dbpedia.org/resource/Message_passing
+COMP 6281 Parallel Programming (*),scalability,http://dbpedia.org/resource/Scalability
+COMP 6281 Parallel Programming (*),parallel programming,http://dbpedia.org/resource/Parallel_computing
+COMP 6281 Parallel Programming (*),parallel programming,http://dbpedia.org/resource/Parallel_computing
+COMP 6311 Animation for Computer Games (*),traditional animation,http://dbpedia.org/resource/Traditional_animation
+COMP 6311 Animation for Computer Games (*),pipeline,http://dbpedia.org/resource/Graphics_pipeline
+COMP 6311 Animation for Computer Games (*),interpolation,http://dbpedia.org/resource/Interpolation
+COMP 6311 Animation for Computer Games (*),inverse kinematics,http://dbpedia.org/resource/Inverse_kinematics
+COMP 6311 Animation for Computer Games (*),motion control,http://dbpedia.org/resource/Motion_control
+COMP 6311 Animation for Computer Games (*),free-form deformation,http://dbpedia.org/resource/Free-form_deformation
+COMP 6321 Machine Learning,machine learning,http://dbpedia.org/resource/Machine_learning
+COMP 6321 Machine Learning,polynomial regression,http://dbpedia.org/resource/Polynomial_regression
+COMP 6321 Machine Learning,overfitting,http://dbpedia.org/resource/Overfitting
+COMP 6321 Machine Learning,model selection,http://dbpedia.org/resource/Model_selection
+COMP 6321 Machine Learning,logistic regression,http://dbpedia.org/resource/Logistic_regression
+COMP 6321 Machine Learning,decision trees,http://dbpedia.org/resource/Decision_tree_learning
+COMP 6321 Machine Learning,instance-based learning,http://dbpedia.org/resource/Instance-based_learning
+COMP 6321 Machine Learning,neural networks,http://dbpedia.org/resource/Artificial_neural_network
+COMP 6321 Machine Learning,support vector machines,http://dbpedia.org/resource/Support_vector_machine
+COMP 6321 Machine Learning,computational learning theory,http://dbpedia.org/resource/Computational_learning_theory
+COMP 6321 Machine Learning,deep belief networks,http://dbpedia.org/resource/Deep_belief_network
+COMP 6321 Machine Learning,unsupervised learning,http://dbpedia.org/resource/Unsupervised_learning
+COMP 6321 Machine Learning,k-means,http://dbpedia.org/resource/K-means_clustering
+COMP 6321 Machine Learning,expectation maximization,http://dbpedia.org/resource/Expectation�maximization_algorithm
+COMP 6321 Machine Learning,principle component analysis,http://dbpedia.org/resource/Principal_component_analysis
+COMP 6321 Machine Learning,dimensionality reduction,http://dbpedia.org/resource/Dimensionality_reduction
+COMP 6321 Machine Learning,dynamical systems,http://dbpedia.org/resource/Dynamical_system
+COMP 6321 Machine Learning,markov,http://dbpedia.org/resource/Hidden_Markov_model
+COMP 6321 Machine Learning,reinforcement learning,http://dbpedia.org/resource/Reinforcement_learning
+COMP 6321 Machine Learning,machine learning,http://dbpedia.org/resource/Machine_learning
+COMP 6331 Advanced Game Development (*),game engine,http://dbpedia.org/resource/Game_engine
+COMP 6331 Advanced Game Development (*),artificial intelligence,http://dbpedia.org/resource/Artificial_intelligence
+COMP 6331 Advanced Game Development (*),ai,http://dbpedia.org/resource/Artificial_intelligence
+COMP 6331 Advanced Game Development (*),player character,http://dbpedia.org/resource/Player_character
+COMP 6331 Advanced Game Development (*),pathfinding,http://dbpedia.org/resource/Pathfinding
+COMP 6331 Advanced Game Development (*),ai,http://dbpedia.org/resource/Artificial_intelligence
+COMP 6331 Advanced Game Development (*),ai,http://dbpedia.org/resource/Artificial_intelligence
+COMP 6331 Advanced Game Development (*),collision detection,http://dbpedia.org/resource/Collision_detection
+COMP 6331 Advanced Game Development (*),mobile gaming,http://dbpedia.org/resource/Mobile_game
+COMP 6331 Advanced Game Development (*),realism,http://dbpedia.org/resource/Literary_realism
+COMP 6331 Advanced Game Development (*),3d,http://dbpedia.org/resource/3D_computer_graphics
+COMP 6341 Computer Vision (*),computer vision,http://dbpedia.org/resource/Computer_vision
+COMP 6341 Computer Vision (*),opencv,http://dbpedia.org/resource/OpenCV
+COMP 6351 Topics in Scientific Computation,numerical methods,http://dbpedia.org/resource/Numerical_analysis
+COMP 6351 Topics in Scientific Computation,scientific computation,http://dbpedia.org/resource/Computational_science
+COMP 6351 Topics in Scientific Computation,nonlinear,http://dbpedia.org/resource/Nonlinear_system
+COMP 6351 Topics in Scientific Computation,ordinary differential equations,http://dbpedia.org/resource/Ordinary_differential_equation
+COMP 6351 Topics in Scientific Computation,finite difference method,http://dbpedia.org/resource/Finite_difference_method
+COMP 6351 Topics in Scientific Computation,numerical stability,http://dbpedia.org/resource/Numerical_stability
+COMP 6351 Topics in Scientific Computation,ordinary differential equations,http://dbpedia.org/resource/Ordinary_differential_equation
+COMP 6351 Topics in Scientific Computation,collocation,http://dbpedia.org/resource/Collocation_method
+COMP 6351 Topics in Scientific Computation,partial differential equations,http://dbpedia.org/resource/Partial_differential_equation
+COMP 6351 Topics in Scientific Computation,nonlinear,http://dbpedia.org/resource/Nonlinear_system
+COMP 6351 Topics in Scientific Computation,diffusion,http://dbpedia.org/resource/Diffusion_equation
+COMP 6361 Numerical Analysis of Nonlinear Equations,nonlinear,http://dbpedia.org/resource/Nonlinear_system
+COMP 6361 Numerical Analysis of Nonlinear Equations,numerical analysis,http://dbpedia.org/resource/Numerical_analysis
+COMP 6361 Numerical Analysis of Nonlinear Equations,numerical simulation,http://dbpedia.org/resource/Computer_simulation
+COMP 6361 Numerical Analysis of Nonlinear Equations,nonlinear,http://dbpedia.org/resource/Nonlinear_system
+COMP 6361 Numerical Analysis of Nonlinear Equations,homotopy,http://dbpedia.org/resource/Homotopy
+COMP 6361 Numerical Analysis of Nonlinear Equations,asymptotic stability,http://dbpedia.org/resource/Lyapunov_stability
+COMP 6361 Numerical Analysis of Nonlinear Equations,travelling wave,http://dbpedia.org/resource/Wave
+COMP 6361 Numerical Analysis of Nonlinear Equations,discretization,http://dbpedia.org/resource/Discretization
+COMP 6381 Digital Geometric Modelling,digital geometry,http://dbpedia.org/resource/Digital_geometry
+COMP 6381 Digital Geometric Modelling,pipeline,http://dbpedia.org/resource/Graphics_pipeline
+COMP 6381 Digital Geometric Modelling,digital,http://dbpedia.org/resource/Digital_electronics
+COMP 6381 Digital Geometric Modelling,3d,http://dbpedia.org/resource/3D_modeling
+COMP 6381 Digital Geometric Modelling,geometry,http://dbpedia.org/resource/Geometry
+COMP 6381 Digital Geometric Modelling,wide range,http://dbpedia.org/resource/Fender_Wide_Range
+COMP 6381 Digital Geometric Modelling,computer-aided design,http://dbpedia.org/resource/Computer-aided_design
+COMP 6381 Digital Geometric Modelling,reverse engineering,http://dbpedia.org/resource/Reverse_engineering
+COMP 6381 Digital Geometric Modelling,triangle,http://dbpedia.org/resource/Computer_graphics
+COMP 6381 Digital Geometric Modelling,3d,http://dbpedia.org/resource/3D_modeling
+COMP 6381 Digital Geometric Modelling,geometry,http://dbpedia.org/resource/Geometry
+COMP 6381 Digital Geometric Modelling,triangle mesh,http://dbpedia.org/resource/Triangle_mesh
+COMP 6381 Digital Geometric Modelling,geometry,http://dbpedia.org/resource/Geometry
+COMP 6381 Digital Geometric Modelling,spline,http://dbpedia.org/resource/Flat_spline
+COMP 6421 Compiler Design (*),lexical analysis,http://dbpedia.org/resource/Lexical_analysis
+COMP 6421 Compiler Design (*),parsing,http://dbpedia.org/resource/Parsing
+COMP 6421 Compiler Design (*),syntax-directed translation,http://dbpedia.org/resource/Syntax-directed_translation
+COMP 6421 Compiler Design (*),code optimization,http://dbpedia.org/resource/Program_optimization
+COMP 6461 Computer Networks and Protocols,error detection,http://dbpedia.org/resource/Error_detection_and_correction
+COMP 6461 Computer Networks and Protocols,flow control,http://dbpedia.org/resource/Control_flow
+COMP 6461 Computer Networks and Protocols,packet switching,http://dbpedia.org/resource/Packet_switching
+COMP 6461 Computer Networks and Protocols,internet protocol,http://dbpedia.org/resource/Internet_Protocol
+COMP 6461 Computer Networks and Protocols,ipv6,http://dbpedia.org/resource/IPv6
+COMP 6461 Computer Networks and Protocols,multicasting,http://dbpedia.org/resource/Multicast
+COMP 6461 Computer Networks and Protocols,udp,http://dbpedia.org/resource/User_Datagram_Protocol
+COMP 6461 Computer Networks and Protocols,tcp,http://dbpedia.org/resource/Transmission_Control_Protocol
+COMP 6461 Computer Networks and Protocols,network security,http://dbpedia.org/resource/Network_security
+COMP 6521 Advanced Database Technology and Applications,query processing,http://dbpedia.org/resource/Query_optimization
+COMP 6521 Advanced Database Technology and Applications,optimization,http://dbpedia.org/resource/Query_optimization
+COMP 6521 Advanced Database Technology and Applications,information integration,http://dbpedia.org/resource/Information_integration
+COMP 6521 Advanced Database Technology and Applications,data warehouse,http://dbpedia.org/resource/Data_warehouse
+COMP 6521 Advanced Database Technology and Applications,data mining,http://dbpedia.org/resource/Data_mining
+COMP 6521 Advanced Database Technology and Applications,olap,http://dbpedia.org/resource/Online_analytical_processing
+COMP 6521 Advanced Database Technology and Applications,xml,http://dbpedia.org/resource/XML
+COMP 6521 Advanced Database Technology and Applications,multimedia,http://dbpedia.org/resource/Multimedia
+COMP 6521 Advanced Database Technology and Applications,data management,http://dbpedia.org/resource/Data_management
+COMP 6531 Foundations of the Semantic Web,world wide web consortium (w3c),http://dbpedia.org/resource/World_Wide_Web_Consortium
+COMP 6531 Foundations of the Semantic Web,extensible markup language (xml),http://dbpedia.org/resource/XML
+COMP 6531 Foundations of the Semantic Web,resource description framework (rdf),http://dbpedia.org/resource/Resource_Description_Framework
+COMP 6531 Foundations of the Semantic Web,schema,http://dbpedia.org/resource/XML_schema
+COMP 6531 Foundations of the Semantic Web,semantic web,http://dbpedia.org/resource/Semantic_Web
+COMP 6531 Foundations of the Semantic Web,ontology,http://dbpedia.org/resource/Ontology_engineering
+COMP 6531 Foundations of the Semantic Web,ontologies,http://dbpedia.org/resource/Ontology
+COMP 6531 Foundations of the Semantic Web,web ontology language (owl),http://dbpedia.org/resource/Web_Ontology_Language
+COMP 6531 Foundations of the Semantic Web,ontologies,http://dbpedia.org/resource/Ontology
+COMP 6531 Foundations of the Semantic Web,ontologies,http://dbpedia.org/resource/Ontology
+COMP 6591 Introduction to Knowledge-Base Systems,first-order logic,http://dbpedia.org/resource/First-order_logic
+COMP 6591 Introduction to Knowledge-Base Systems,relational algebra,http://dbpedia.org/resource/Relational_algebra
+COMP 6591 Introduction to Knowledge-Base Systems,relational calculus,http://dbpedia.org/resource/Relational_calculus
+COMP 6591 Introduction to Knowledge-Base Systems,logic programming,http://dbpedia.org/resource/Logic_programming
+COMP 6591 Introduction to Knowledge-Base Systems,knowledge representation,http://dbpedia.org/resource/Knowledge_representation_and_reasoning
+COMP 6621 Discrete Mathematics of Paul Erdös,computer science,http://dbpedia.org/resource/Computer_science
+COMP 6621 Discrete Mathematics of Paul Erdös,theorem,http://dbpedia.org/resource/Theorem
+COMP 6621 Discrete Mathematics of Paul Erdös,ramsey,http://dbpedia.org/resource/Ramsey_Abbey
+COMP 6621 Discrete Mathematics of Paul Erdös,van,http://dbpedia.org/resource/Van
+COMP 6621 Discrete Mathematics of Paul Erdös,theorem,http://dbpedia.org/resource/Theorem
+COMP 6621 Discrete Mathematics of Paul Erdös,van,http://dbpedia.org/resource/Van
+COMP 6621 Discrete Mathematics of Paul Erdös,conjecture,http://dbpedia.org/resource/Conjecture
+COMP 6621 Discrete Mathematics of Paul Erdös,theorem,http://dbpedia.org/resource/Theorem
+COMP 6621 Discrete Mathematics of Paul Erdös,extremal graph theory,http://dbpedia.org/resource/Extremal_graph_theory
+COMP 6621 Discrete Mathematics of Paul Erdös,random graphs,http://dbpedia.org/resource/Random_graph
+COMP 6621 Discrete Mathematics of Paul Erdös,graph colouring,http://dbpedia.org/resource/Graph_coloring
+COMP 6621 Discrete Mathematics of Paul Erdös,probabilistic method,http://dbpedia.org/resource/Probabilistic_method
+COMP 6621 Discrete Mathematics of Paul Erdös,computer science,http://dbpedia.org/resource/Computer_science
+COMP 6631 Large-Scale Optimization,mathematical modelling,http://dbpedia.org/resource/Mathematical_model
+COMP 6631 Large-Scale Optimization,optimization,http://dbpedia.org/resource/Mathematical_optimization
+COMP 6631 Large-Scale Optimization,optimization,http://dbpedia.org/resource/Mathematical_optimization
+COMP 6631 Large-Scale Optimization,lagrangian relaxation,http://dbpedia.org/resource/Lagrangian_relaxation
+COMP 6631 Large-Scale Optimization,non-linear programming,http://dbpedia.org/resource/Nonlinear_programming
+COMP 6631 Large-Scale Optimization,optimization,http://dbpedia.org/resource/Mathematical_optimization
+COMP 6631 Large-Scale Optimization,integer,http://dbpedia.org/resource/Integer
+COMP 6631 Large-Scale Optimization,nonlinear,http://dbpedia.org/resource/Nonlinear_system
+COMP 6631 Large-Scale Optimization,continuous optimization,http://dbpedia.org/resource/Continuous_optimization
+COMP 6631 Large-Scale Optimization,branch-and-bound,http://dbpedia.org/resource/Branch_and_bound
+COMP 6631 Large-Scale Optimization,dc,http://dbpedia.org/resource/Direct_current
+COMP 6631 Large-Scale Optimization,convex,http://dbpedia.org/resource/Convex_optimization
+COMP 6631 Large-Scale Optimization,bilinear,http://dbpedia.org/resource/Bilinear_form
+COMP 6631 Large-Scale Optimization,biconvex optimization,http://dbpedia.org/resource/Biconvex_optimization
+COMP 6631 Large-Scale Optimization,heuristics,http://dbpedia.org/resource/Heuristic
+COMP 6641 Theory of Computation,general,http://dbpedia.org/resource/History_of_economic_thought
+COMP 6641 Theory of Computation,turing machines,http://dbpedia.org/resource/Turing_machine
+COMP 6641 Theory of Computation,turing machines,http://dbpedia.org/resource/Turing_machine
+COMP 6641 Theory of Computation,turing computable,http://dbpedia.org/resource/Computable_function
+COMP 6641 Theory of Computation,recursive functions,http://dbpedia.org/resource/Computable_function
+COMP 6641 Theory of Computation,theorem,http://dbpedia.org/resource/Theorem
+COMP 6641 Theory of Computation,time,http://dbpedia.org/resource/Time
+COMP 6641 Theory of Computation,complexity measures,http://dbpedia.org/resource/Computational_complexity_theory
+COMP 6641 Theory of Computation,complexity measures,http://dbpedia.org/resource/Computational_complexity_theory
+COMP 6641 Theory of Computation,complexity theory,http://dbpedia.org/resource/Computational_complexity_theory
+COMP 6651 Algorithm Design Techniques,algorithm,http://dbpedia.org/resource/Algorithm
+COMP 6651 Algorithm Design Techniques,combinatorial,http://dbpedia.org/resource/Combinatorial_optimization
+COMP 6651 Algorithm Design Techniques,dynamic programming,http://dbpedia.org/resource/Dynamic_programming
+COMP 6651 Algorithm Design Techniques,branch-and-bound,http://dbpedia.org/resource/Branch_and_bound
+COMP 6651 Algorithm Design Techniques,graph,http://dbpedia.org/resource/Graph_theory
+COMP 6651 Algorithm Design Techniques,complexity analysis,http://dbpedia.org/resource/Analysis_of_algorithms
+COMP 6651 Algorithm Design Techniques,string matching,http://dbpedia.org/resource/String_searching_algorithm
+COMP 6651 Algorithm Design Techniques,np-complete,http://dbpedia.org/resource/NP-completeness
+COMP 6661 Combinatorial Algorithms,combinatorial,http://dbpedia.org/resource/Combinatorics
+COMP 6661 Combinatorial Algorithms,combinatorics,http://dbpedia.org/resource/Combinatorics
+COMP 6661 Combinatorial Algorithms,graph theory,http://dbpedia.org/resource/Graph_theory
+COMP 6711 Computational Geometry,convex,http://dbpedia.org/resource/Convex_set
+COMP 6711 Computational Geometry,polygon triangulation,http://dbpedia.org/resource/Polygon_triangulation
+COMP 6711 Computational Geometry,point location,http://dbpedia.org/resource/Point_location
+COMP 6711 Computational Geometry,range searching,http://dbpedia.org/resource/Range_searching
+COMP 6711 Computational Geometry,voronoi,http://dbpedia.org/resource/Voronoi_diagram
+COMP 6711 Computational Geometry,delaunay,http://dbpedia.org/resource/Robert_Delaunay
+COMP 6711 Computational Geometry,triangulations,http://dbpedia.org/resource/Polygon_triangulation
+COMP 6711 Computational Geometry,robot,http://dbpedia.org/resource/Robotics
+COMP 6711 Computational Geometry,motion planning,http://dbpedia.org/resource/Motion_planning
+COMP 6711 Computational Geometry,binary,http://dbpedia.org/resource/Binary_number
+COMP 6711 Computational Geometry,plane sweep,http://dbpedia.org/resource/Sweep_line_algorithm
+COMP 6711 Computational Geometry,computer graphics,http://dbpedia.org/resource/Computer_graphics
+COMP 6711 Computational Geometry,computer aided design,http://dbpedia.org/resource/Computer-aided_design
+COMP 6711 Computational Geometry,mesh generation,http://dbpedia.org/resource/Mesh_generation
+COMP 6711 Computational Geometry,robot,http://dbpedia.org/resource/Robotics
+COMP 6711 Computational Geometry,motion planning,http://dbpedia.org/resource/Motion_planning
+COMP 6721 Applied Artificial Intelligence (*),heuristic,http://dbpedia.org/resource/Heuristic
+COMP 6721 Applied Artificial Intelligence (*),automated reasoning,http://dbpedia.org/resource/Automated_reasoning
+COMP 6721 Applied Artificial Intelligence (*),knowledge representation,http://dbpedia.org/resource/Knowledge_representation_and_reasoning
+COMP 6721 Applied Artificial Intelligence (*),artificial intelligence,http://dbpedia.org/resource/Artificial_intelligence
+COMP 6721 Applied Artificial Intelligence (*),recurrent neural networks,http://dbpedia.org/resource/Recurrent_neural_network
+COMP 6731 Pattern Recognition (*),feature extraction,http://dbpedia.org/resource/Feature_extraction
+COMP 6731 Pattern Recognition (*),bayesian decision theory,http://dbpedia.org/resource/Bayes_estimator
+COMP 6731 Pattern Recognition (*),discriminant,http://dbpedia.org/resource/Discriminant
+COMP 6741 Intelligent Systems (*),knowledge representation,http://dbpedia.org/resource/Knowledge_representation_and_reasoning
+COMP 6741 Intelligent Systems (*),conflict resolution,http://dbpedia.org/resource/Conflict_resolution
+COMP 6741 Intelligent Systems (*),blackboard,http://dbpedia.org/resource/Blackboard
+COMP 6751 Natural Language Analysis,natural language processing,http://dbpedia.org/resource/Natural-language_processing
+COMP 6751 Natural Language Analysis,english,http://dbpedia.org/resource/English_language
+COMP 6751 Natural Language Analysis,parsing,http://dbpedia.org/resource/Parsing
+COMP 6751 Natural Language Analysis,compositional semantics,http://dbpedia.org/resource/Principle_of_compositionality
+COMP 6751 Natural Language Analysis,text mining,http://dbpedia.org/resource/Text_mining
+COMP 6761 Advanced 3D Graphics for Game Programming,software engineering,http://dbpedia.org/resource/Software_engineering
+COMP 6761 Advanced 3D Graphics for Game Programming,3d graphics,http://dbpedia.org/resource/3D_computer_graphics
+COMP 6761 Advanced 3D Graphics for Game Programming,application architecture,http://dbpedia.org/resource/Applications_architecture
+COMP 6761 Advanced 3D Graphics for Game Programming,3d,http://dbpedia.org/resource/3D_modeling
+COMP 6761 Advanced 3D Graphics for Game Programming,3d graphics,http://dbpedia.org/resource/3D_computer_graphics
+COMP 6761 Advanced 3D Graphics for Game Programming,pipeline,http://dbpedia.org/resource/Graphics_pipeline
+COMP 6761 Advanced 3D Graphics for Game Programming,3d graphics,http://dbpedia.org/resource/3D_computer_graphics
+COMP 6761 Advanced 3D Graphics for Game Programming,occlusion culling,http://dbpedia.org/resource/Hidden_surface_determination
+COMP 6761 Advanced 3D Graphics for Game Programming,collision detection,http://dbpedia.org/resource/Collision_detection
+COMP 6761 Advanced 3D Graphics for Game Programming,photorealism,http://dbpedia.org/resource/Photorealism
+COMP 6761 Advanced 3D Graphics for Game Programming,physics,http://dbpedia.org/resource/Game_physics
+COMP 6771 Image Processing (*) ,image enhancement,http://dbpedia.org/resource/Digital_image_processing
+COMP 6771 Image Processing (*) ,histogram,http://dbpedia.org/resource/Histogram
+COMP 6771 Image Processing (*) ,frequency domain,http://dbpedia.org/resource/Frequency_domain
+COMP 6771 Image Processing (*) ,image segmentation,http://dbpedia.org/resource/Image_segmentation
+COMP 6771 Image Processing (*) ,hough transform,http://dbpedia.org/resource/Hough_transform
+COMP 6771 Image Processing (*) ,edge detection,http://dbpedia.org/resource/Edge_detection
+COMP 6771 Image Processing (*) ,thresholding,http://dbpedia.org/resource/Thresholding_(image_processing)
+COMP 6771 Image Processing (*) ,image compression,http://dbpedia.org/resource/Image_compression
+COMP 6771 Image Processing (*) ,wavelet transform,http://dbpedia.org/resource/Wavelet_transform
+COMP 6781 Statistical Natural Language Processing,natural language processing (nlp),http://dbpedia.org/resource/Natural-language_processing
+COMP 6781 Statistical Natural Language Processing,statistical machine translation,http://dbpedia.org/resource/Statistical_machine_translation
+COMP 6781 Statistical Natural Language Processing,n-gram,http://dbpedia.org/resource/N-gram
+COMP 6781 Statistical Natural Language Processing,word sense disambiguation,http://dbpedia.org/resource/Word-sense_disambiguation
+COMP 6781 Statistical Natural Language Processing,part-of-speech tagging,http://dbpedia.org/resource/Part-of-speech_tagging
+COMP 6781 Statistical Natural Language Processing,parsing,http://dbpedia.org/resource/Parsing
+COMP 6791 Information Retrieval and Web Search (*),boolean,http://dbpedia.org/resource/Boolean_algebra
+COMP 6791 Information Retrieval and Web Search (*),vector space,http://dbpedia.org/resource/Vector_space
+COMP 6791 Information Retrieval and Web Search (*),tokenization,http://dbpedia.org/resource/Lexical_analysis
+COMP 6791 Information Retrieval and Web Search (*),weighting,http://dbpedia.org/resource/Weighting
+COMP 6791 Information Retrieval and Web Search (*),relevance feedback,http://dbpedia.org/resource/Relevance_feedback
+COMP 6791 Information Retrieval and Web Search (*),query expansion,http://dbpedia.org/resource/Query_expansion
+COMP 6791 Information Retrieval and Web Search (*),xml,http://dbpedia.org/resource/XML
+COMP 6791 Information Retrieval and Web Search (*),link analysis,http://dbpedia.org/resource/Link_analysis
+COMP 6791 Information Retrieval and Web Search (*),pagerank,http://dbpedia.org/resource/PageRank
+COMP 6791 Information Retrieval and Web Search (*),algorithm,http://dbpedia.org/resource/Algorithm
+COMP 6791 Information Retrieval and Web Search (*),spam filtering,http://dbpedia.org/resource/Anti-spam_techniques
+COMP 6811 Bioinformatics Algorithms,bioinformatics,http://dbpedia.org/resource/Bioinformatics
+COMP 6811 Bioinformatics Algorithms,sequence alignment,http://dbpedia.org/resource/Multiple_sequence_alignment
+COMP 6811 Bioinformatics Algorithms,multiple sequence alignment,http://dbpedia.org/resource/Multiple_sequence_alignment
+COMP 6811 Bioinformatics Algorithms,phylogeny,http://dbpedia.org/resource/Phylogenetic_tree
+COMP 6811 Bioinformatics Algorithms,secondary structure prediction,http://dbpedia.org/resource/Protein_structure_prediction
+COMP 6811 Bioinformatics Algorithms,3d,http://dbpedia.org/resource/Three-dimensional_space
+COMP 6811 Bioinformatics Algorithms,gene,http://dbpedia.org/resource/Gene
+COMP 6811 Bioinformatics Algorithms,expression,http://dbpedia.org/resource/Gene_expression
+COMP 6811 Bioinformatics Algorithms,dynamic programming,http://dbpedia.org/resource/Dynamic_programming
+COMP 6811 Bioinformatics Algorithms,machine learning,http://dbpedia.org/resource/Machine_learning
+COMP 6811 Bioinformatics Algorithms,simulated annealing,http://dbpedia.org/resource/Simulated_annealing
+COMP 6821 Bioinformatics Databases and Systems,bioinformatics,http://dbpedia.org/resource/Bioinformatics
+COMP 6821 Bioinformatics Databases and Systems,data management,http://dbpedia.org/resource/Data_management
+COMP 6821 Bioinformatics Databases and Systems,knowledge management,http://dbpedia.org/resource/Knowledge_management
+COMP 6821 Bioinformatics Databases and Systems,database,http://dbpedia.org/resource/Database
+COMP 6821 Bioinformatics Databases and Systems,database,http://dbpedia.org/resource/Database
+COMP 6821 Bioinformatics Databases and Systems,bioinformatics,http://dbpedia.org/resource/Bioinformatics
+COMP 691 Topics in Computer Science I,comp,http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific
+COMP 691 Topics in Computer Science I,comp,http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific
+COMP 6961 Graduate Seminar in Computer Science,pass/fail,http://dbpedia.org/resource/Failure
+COMP 6971 Project and Report ,applied computer science,http://dbpedia.org/resource/Computer_science
+COMP 7241 Parallel Algorithms and Architectures,memory,http://dbpedia.org/resource/Computer_memory
+COMP 7241 Parallel Algorithms and Architectures,complexity analysis,http://dbpedia.org/resource/Analysis_of_algorithms
+COMP 7251 Mobile Computing and Wireless Networks,mobile computing,http://dbpedia.org/resource/Mobile_computing
+COMP 7251 Mobile Computing and Wireless Networks,wireless,http://dbpedia.org/resource/Wireless_LAN
+COMP 7251 Mobile Computing and Wireless Networks,pan,http://dbpedia.org/resource/Personal_area_network
+COMP 7251 Mobile Computing and Wireless Networks,man,http://dbpedia.org/resource/Metropolitan_area_network
+COMP 7251 Mobile Computing and Wireless Networks,sensor networks,http://dbpedia.org/resource/Wireless_sensor_network
+COMP 7251 Mobile Computing and Wireless Networks,topology,http://dbpedia.org/resource/Network_topology
+COMP 7451 Semantics of Programming Languages,semantic,http://dbpedia.org/resource/Semantics
+COMP 7451 Semantics of Programming Languages,semantics,http://dbpedia.org/resource/Semantics
+COMP 7451 Semantics of Programming Languages,model-theoretic,http://dbpedia.org/resource/Model_theory
+COMP 7451 Semantics of Programming Languages,logic,http://dbpedia.org/resource/Logic
+COMP 7451 Semantics of Programming Languages,temporal logic,http://dbpedia.org/resource/Temporal_logic
+COMP 7451 Semantics of Programming Languages,distributed systems,http://dbpedia.org/resource/Distributed_computing
+COMP 7451 Semantics of Programming Languages,semantics,http://dbpedia.org/resource/Semantics
+COMP 7521 Cryptography and Data Security,cryptography,http://dbpedia.org/resource/Cryptography
+COMP 7521 Cryptography and Data Security,information theory,http://dbpedia.org/resource/Information_theory
+COMP 7521 Cryptography and Data Security,symmetric-key,http://dbpedia.org/resource/Symmetric-key_algorithm
+COMP 7521 Cryptography and Data Security,cryptographic,http://dbpedia.org/resource/Cryptography
+COMP 7521 Cryptography and Data Security,advanced encryption standard,http://dbpedia.org/resource/Advanced_Encryption_Standard
+COMP 7521 Cryptography and Data Security,rijndael,http://dbpedia.org/resource/Advanced_Encryption_Standard
+COMP 7521 Cryptography and Data Security,cryptographic hash functions,http://dbpedia.org/resource/Cryptographic_hash_function
+COMP 7521 Cryptography and Data Security,authentication,http://dbpedia.org/resource/Authentication
+COMP 7521 Cryptography and Data Security,data integrity,http://dbpedia.org/resource/Data_integrity
+COMP 7521 Cryptography and Data Security,authentication,http://dbpedia.org/resource/Authentication
+COMP 7521 Cryptography and Data Security,key distribution,http://dbpedia.org/resource/Key_distribution
+COMP 7521 Cryptography and Data Security,confidentiality,http://dbpedia.org/resource/Confidentiality
+COMP 7521 Cryptography and Data Security,authentication,http://dbpedia.org/resource/Authentication
+COMP 7521 Cryptography and Data Security,access control,http://dbpedia.org/resource/Access_control
+COMP 7521 Cryptography and Data Security,non-repudiation,http://dbpedia.org/resource/Non-repudiation
+COMP 7521 Cryptography and Data Security,encryption,http://dbpedia.org/resource/Public-key_cryptography
+COMP 7521 Cryptography and Data Security,digital,http://dbpedia.org/resource/Digital_data
+COMP 7521 Cryptography and Data Security,challenge-response authentication,http://dbpedia.org/resource/Challenge�response_authentication
+COMP 7521 Cryptography and Data Security,cryptography,http://dbpedia.org/resource/Cryptography
+COMP 7531 Database Systems Principles,deductive database,http://dbpedia.org/resource/Deductive_database
+COMP 7531 Database Systems Principles,optimization,http://dbpedia.org/resource/Query_optimization
+COMP 7531 Database Systems Principles,incomplete,http://dbpedia.org/resource/Incomplete_(Backstreet_Boys_song)
+COMP 7651 Advanced Analysis of Algorithms,amortized analysis,http://dbpedia.org/resource/Amortized_analysis
+COMP 7661 Advanced Rendering and Animation,computer graphics,http://dbpedia.org/resource/Computer_graphics
+COMP 7751 Advanced Pattern Recognition ,pattern recognition,http://dbpedia.org/resource/Pattern_recognition
+COMP 7751 Advanced Pattern Recognition ,data acquisition,http://dbpedia.org/resource/Data_acquisition
+COMP 7751 Advanced Pattern Recognition ,feature extraction,http://dbpedia.org/resource/Feature_extraction
+COMP 7751 Advanced Pattern Recognition ,principal component analysis,http://dbpedia.org/resource/Principal_component_analysis
+COMP 7751 Advanced Pattern Recognition ,expert systems,http://dbpedia.org/resource/Expert_system
+COMP 7751 Advanced Pattern Recognition ,neural networks,http://dbpedia.org/resource/Artificial_neural_network
+COMP 7751 Advanced Pattern Recognition ,pattern recognition,http://dbpedia.org/resource/Pattern_recognition
+COMP 7781 Advanced Image Processing,digital image processing,http://dbpedia.org/resource/Digital_image_processing
+COMP 7781 Advanced Image Processing,morphological,http://dbpedia.org/resource/Shape
+COMP 7781 Advanced Image Processing,wavelet,http://dbpedia.org/resource/Wavelet
+COMP 7781 Advanced Image Processing,multi-resolution analysis,http://dbpedia.org/resource/Multiresolution_analysis
+COMP 7781 Advanced Image Processing,partial differential equation,http://dbpedia.org/resource/Partial_differential_equation
+COMP 7781 Advanced Image Processing,variational methods,http://dbpedia.org/resource/Calculus_of_variations
+COMP 7781 Advanced Image Processing,diffusion,http://dbpedia.org/resource/Diffusion_equation
+COMP 7781 Advanced Image Processing,markov random field,http://dbpedia.org/resource/Markov_random_field
+COMP 7781 Advanced Image Processing,bayesian inference,http://dbpedia.org/resource/Bayesian_inference
+COMP 7781 Advanced Image Processing,energy,http://dbpedia.org/resource/Energy
+COMP 7781 Advanced Image Processing,level set method,http://dbpedia.org/resource/Level-set_method
+COMP 7781 Advanced Image Processing,inpainting,http://dbpedia.org/resource/Inpainting
+COMP 791 Topics in Computer Science II,comp,http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific
+COMP 791 Topics in Computer Science II,comp,http://dbpedia.org/resource/College_of_Osteopathic_Medicine_of_the_Pacific
+SOEN 6011 Software Engineering Processes,software engineering,http://dbpedia.org/resource/Software_engineering
+SOEN 6011 Software Engineering Processes,version control,http://dbpedia.org/resource/Version_control
+SOEN 6011 Software Engineering Processes,code review,http://dbpedia.org/resource/Code_review
+SOEN 6011 Software Engineering Processes,continuous integration,http://dbpedia.org/resource/Continuous_integration
+SOEN 6011 Software Engineering Processes,open source,http://dbpedia.org/resource/Open-source_model
+SOEN 6211 Semantic Computing,system analysis,http://dbpedia.org/resource/System_analysis
+SOEN 6211 Semantic Computing,semantic,http://dbpedia.org/resource/Semantic_Web
+SOEN 6211 Semantic Computing,text mining,http://dbpedia.org/resource/Text_mining
+SOEN 6211 Semantic Computing,collaborative filtering,http://dbpedia.org/resource/Collaborative_filtering
+SOEN 6211 Semantic Computing,blogosphere,http://dbpedia.org/resource/Blogosphere
+SOEN 6211 Semantic Computing,machine learning,http://dbpedia.org/resource/Machine_learning
+SOEN 6211 Semantic Computing,the web,http://dbpedia.org/resource/World_Wide_Web
+SOEN 6211 Semantic Computing,semantic web,http://dbpedia.org/resource/Semantic_Web
+SOEN 6211 Semantic Computing,rdf,http://dbpedia.org/resource/Resource_Description_Framework
+SOEN 6211 Semantic Computing,rdfs,http://dbpedia.org/resource/RDF_Schema
+SOEN 6211 Semantic Computing,sparql,http://dbpedia.org/resource/SPARQL
+SOEN 6211 Semantic Computing,linked open data,http://dbpedia.org/resource/Linked_data
+SOEN 6211 Semantic Computing,lod,http://dbpedia.org/resource/Linked_data
+SOEN 6211 Semantic Computing,semantic web,http://dbpedia.org/resource/Semantic_Web
+SOEN 6211 Semantic Computing,ontologies,http://dbpedia.org/resource/Ontology
+SOEN 6211 Semantic Computing,semantic web,http://dbpedia.org/resource/Semantic_Web
+SOEN 6211 Semantic Computing,software development,http://dbpedia.org/resource/Software_development
+SOEN 6211 Semantic Computing,business intelligence,http://dbpedia.org/resource/Business_intelligence
+SOEN 6211 Semantic Computing,e-commerce,http://dbpedia.org/resource/E-commerce
+SOEN 6211 Semantic Computing,e-science,http://dbpedia.org/resource/E-Science
+SOEN 6211 Semantic Computing,semantic,http://dbpedia.org/resource/Semantic_Web
+SOEN 6311 Formal Methods,formal methods,http://dbpedia.org/resource/Formal_methods
+SOEN 6311 Formal Methods,formal methods,http://dbpedia.org/resource/Formal_methods
+SOEN 6311 Formal Methods,software life-cycle,http://dbpedia.org/resource/Software_release_life_cycle
+SOEN 6311 Formal Methods,process model,http://dbpedia.org/resource/Software_development_process
+SOEN 6311 Formal Methods,formal specification,http://dbpedia.org/resource/Formal_specification
+SOEN 6311 Formal Methods,finite-state,http://dbpedia.org/resource/Finite-state_machine
+SOEN 6311 Formal Methods,software development,http://dbpedia.org/resource/Software_development
+SOEN 6311 Formal Methods,formal methods,http://dbpedia.org/resource/Formal_methods
+SOEN 6311 Formal Methods,type checking,http://dbpedia.org/resource/Type_system
+SOEN 6311 Formal Methods,debugging,http://dbpedia.org/resource/Debugging
+SOEN 6311 Formal Methods,code generation,http://dbpedia.org/resource/Automatic_programming
+SOEN 6431 Software Comprehension and Maintenance,software maintenance,http://dbpedia.org/resource/Software_maintenance
+SOEN 6431 Software Comprehension and Maintenance,cognitive,http://dbpedia.org/resource/Cognition
+SOEN 6431 Software Comprehension and Maintenance,software visualization,http://dbpedia.org/resource/Software_visualization
+SOEN 6431 Software Comprehension and Maintenance,case,http://dbpedia.org/resource/Computer-aided_software_engineering
+SOEN 6431 Software Comprehension and Maintenance,reverse engineering,http://dbpedia.org/resource/Reverse_engineering
+SOEN 6431 Software Comprehension and Maintenance,code analysis,http://dbpedia.org/resource/Static_program_analysis
+SOEN 6431 Software Comprehension and Maintenance,software configuration management,http://dbpedia.org/resource/Software_configuration_management
+SOEN 6431 Software Comprehension and Maintenance,software maintenance,http://dbpedia.org/resource/Software_maintenance
+SOEN 6431 Software Comprehension and Maintenance,program comprehension,http://dbpedia.org/resource/Program_comprehension
+SOEN 6441 Advanced Programming Practices,self-documenting code,http://dbpedia.org/resource/Self-documenting_code
+SOEN 6441 Advanced Programming Practices,software configuration management,http://dbpedia.org/resource/Software_configuration_management
+SOEN 6441 Advanced Programming Practices,unit tests,http://dbpedia.org/resource/Unit_testing
+SOEN 6441 Advanced Programming Practices,multi-threading,http://dbpedia.org/resource/Thread_(computing)
+SOEN 6441 Advanced Programming Practices,concurrency,http://dbpedia.org/resource/Parallel_computing
+SOEN 6441 Advanced Programming Practices,code reuse,http://dbpedia.org/resource/Code_reuse
+SOEN 6441 Advanced Programming Practices,fault tolerance,http://dbpedia.org/resource/Fault_tolerance
+SOEN 6461 Software Design Methodologies,software design,http://dbpedia.org/resource/Software_design
+SOEN 6461 Software Design Methodologies,design methods,http://dbpedia.org/resource/Design_methods
+SOEN 6461 Software Design Methodologies,object-oriented,http://dbpedia.org/resource/Object-oriented_programming
+SOEN 6461 Software Design Methodologies,design patterns,http://dbpedia.org/resource/Software_design_pattern
+SOEN 6471 Advanced Software Architectures,design patterns,http://dbpedia.org/resource/Software_design_pattern
+SOEN 6471 Advanced Software Architectures,model driven architecture (mda),http://dbpedia.org/resource/Model-driven_architecture
+SOEN 6471 Advanced Software Architectures,service oriented architecture,http://dbpedia.org/resource/Service-oriented_architecture
+SOEN 6471 Advanced Software Architectures,soa,http://dbpedia.org/resource/Service-oriented_architecture
+SOEN 6471 Advanced Software Architectures,cloud computing,http://dbpedia.org/resource/Cloud_computing
+SOEN 6481 Software Systems Requirements Specification,requirements engineering,http://dbpedia.org/resource/Requirements_engineering
+SOEN 6481 Software Systems Requirements Specification,requirements engineering,http://dbpedia.org/resource/Requirements_engineering
+SOEN 6481 Software Systems Requirements Specification,software lifecycle,http://dbpedia.org/resource/Software_development_process
+SOEN 6481 Software Systems Requirements Specification,requirements elicitation,http://dbpedia.org/resource/Requirements_elicitation
+SOEN 6481 Software Systems Requirements Specification,risk analysis,http://dbpedia.org/resource/Risk_analysis
+SOEN 6481 Software Systems Requirements Specification,language documentation,http://dbpedia.org/resource/Language_documentation
+SOEN 6481 Software Systems Requirements Specification,ieee,http://dbpedia.org/resource/Institute_of_Electrical_and_Electronics_Engineers
+SOEN 6481 Software Systems Requirements Specification,iso,http://dbpedia.org/resource/International_Organization_for_Standardization
+SOEN 6481 Software Systems Requirements Specification,agile,http://dbpedia.org/resource/Agile_software_development
+SOEN 6481 Software Systems Requirements Specification,user stories,http://dbpedia.org/resource/User_story
+SOEN 6481 Software Systems Requirements Specification,formal specification,http://dbpedia.org/resource/Formal_specification
+SOEN 6481 Software Systems Requirements Specification,formal languages,http://dbpedia.org/resource/Formal_language
+SOEN 6481 Software Systems Requirements Specification,quality assurance,http://dbpedia.org/resource/Quality_assurance
+SOEN 6481 Software Systems Requirements Specification,evolution,http://dbpedia.org/resource/Evolution
+SOEN 6481 Software Systems Requirements Specification,uml,http://dbpedia.org/resource/Unified_Modeling_Language
+SOEN 6481 Software Systems Requirements Specification,ontologies,http://dbpedia.org/resource/Upper_ontology
+SOEN 6481 Software Systems Requirements Specification,domain-specific,http://dbpedia.org/resource/Domain-specific_language
+SOEN 6481 Software Systems Requirements Specification,test,http://dbpedia.org/resource/Test_cricket
+SOEN 6491 Software Refactoring,preventive maintenance,http://dbpedia.org/resource/Preventive_maintenance
+SOEN 6491 Software Refactoring,preventive maintenance,http://dbpedia.org/resource/Preventive_maintenance
+SOEN 6491 Software Refactoring,evolution,http://dbpedia.org/resource/Evolution
+SOEN 6491 Software Refactoring,code analysis,http://dbpedia.org/resource/Static_program_analysis
+SOEN 6501 Programming Competency Test,applied computer science,http://dbpedia.org/resource/Computer_science
+SOEN 6501 Programming Competency Test,software engineering,http://dbpedia.org/resource/Software_engineering
+SOEN 6611 Software Measurement,software engineering,http://dbpedia.org/resource/Software_engineering
+SOEN 6611 Software Measurement,software measurement,http://dbpedia.org/resource/Software_measurement
+SOEN 6611 Software Measurement,software measurement,http://dbpedia.org/resource/Software_measurement
+SOEN 6611 Software Measurement,software engineering,http://dbpedia.org/resource/Software_engineering
+SOEN 6611 Software Measurement,project management,http://dbpedia.org/resource/Project_management
+SOEN 6611 Software Measurement,software measurement,http://dbpedia.org/resource/Software_measurement
+SOEN 6751 Human Computer Interface Design ,human computer,http://dbpedia.org/resource/Human_computer
+SOEN 6751 Human Computer Interface Design ,user-centered design,http://dbpedia.org/resource/User-centered_design
+SOEN 6751 Human Computer Interface Design ,task analysis,http://dbpedia.org/resource/Task_analysis
+SOEN 6751 Human Computer Interface Design ,user interface design,http://dbpedia.org/resource/User_interface_design
+SOEN 6751 Human Computer Interface Design ,user interface,http://dbpedia.org/resource/User_interface
+SOEN 6751 Human Computer Interface Design ,user interface,http://dbpedia.org/resource/User_interface
+SOEN 6761 Multimedia Computing,multimedia,http://dbpedia.org/resource/Multimedia
+SOEN 6761 Multimedia Computing,3d,http://dbpedia.org/resource/3D_modeling
+SOEN 6761 Multimedia Computing,multimedia,http://dbpedia.org/resource/Multimedia
+SOEN 6761 Multimedia Computing,computer science,http://dbpedia.org/resource/Computer_science
+SOEN 6761 Multimedia Computing,software engineering,http://dbpedia.org/resource/Software_engineering
+"SOEN 6861 Services Computing: Foundations, Design and Implementations",service oriented architecture,http://dbpedia.org/resource/Service-oriented_architecture
+"SOEN 6861 Services Computing: Foundations, Design and Implementations",web services,http://dbpedia.org/resource/Web_service
+"SOEN 6861 Services Computing: Foundations, Design and Implementations",soap,http://dbpedia.org/resource/SOAP
+"SOEN 6861 Services Computing: Foundations, Design and Implementations",service-oriented architecture,http://dbpedia.org/resource/Service-oriented_architecture
+"SOEN 6861 Services Computing: Foundations, Design and Implementations",restful,http://dbpedia.org/resource/Representational_state_transfer
+"SOEN 6861 Services Computing: Foundations, Design and Implementations",process modelling,http://dbpedia.org/resource/Process_modeling
+SOEN 6971 Project and Report ,applied computer science,http://dbpedia.org/resource/Computer_science
+SOEN 791 Topics in Software Engineering II,soen,http://dbpedia.org/resource/Soen
+SOEN 791 Topics in Software Engineering II,soen,http://dbpedia.org/resource/Soen

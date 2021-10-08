@@ -1,0 +1,53 @@
+
+uni:Student a rdfs:Class ;
+  rdfs:label    "Student"@en ;
+  rdfs:comment  "Student Class." .
+
+uni:StudentID a rdfs:Class ;
+  rdfs:label    "Student ID"@en ;
+  rdfs:comment  "StudenID Class." .
+
+uni:hasStudentID a rdf:Property ;
+  rdfs:label    "has ID"@en ;
+  rdfs:comment  "Property that denotes ownership of a studnet ID." .
+
+uni:completed a rdf:Property ;
+    rdfs:domain uni:Student ;
+    rdfs:range uni:Course ;
+  rdfs:label    "took in  2016"@en ;
+  rdfs:comment  "Property that denotes taking the course in 2016." .
+
+uni:gotAin a rdf:Property ;
+    rdfs:domain uni:Student ;
+    rdfs:range uni:Course ;
+           rdfs:subPropertyOf uni:completed ;
+  rdfs:label    "got an A in the course"@en ;
+  rdfs:comment  "Property that denotes recieving an A in a course." .
+
+uni:gotBin a rdf:Property ;
+    rdfs:domain uni:Student ;
+    rdfs:range uni:Course ;
+           rdfs:subPropertyOf uni:completed ;
+  rdfs:label    "got a B in the course"@en ;
+  rdfs:comment  "Property that denotes recieving an B in a course." .
+
+uni:gotCin a rdf:Property ;
+    rdfs:domain uni:Student ;
+    rdfs:range uni:Course ;
+           rdfs:subPropertyOf uni:completed ;
+  rdfs:label    "got a C in the course "@en ;
+  rdfs:comment  "Property that denotes recieving an C in a course." .
+
+uni:gotDin a rdf:Property ;
+    rdfs:domain uni:Student ;
+    rdfs:range uni:Course ;
+           rdfs:subPropertyOf uni:completed ;
+  rdfs:label    "got a D in the course"@en ;
+  rdfs:comment  "Property that denotes recieving an D in a course." .
+
+uni:gotFin a rdf:Property ;
+    rdfs:domain uni:Student ;
+    rdfs:range uni:Course ;
+           rdfs:subPropertyOf uni:completed ;
+  rdfs:label    "got an F in the course"@en ;
+  rdfs:comment  "Property that denotes recieving an F in a course." .
